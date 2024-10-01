@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+
+}
+
+.container_header {
+    background-color: rgb(12, 11, 11);
+    max-width: 1600px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0.01%;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    width: 107px;
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    text-decoration: background-color 0.3s ease;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: center;
+}
+
+.menu nav {
+    margin: 0px 20px;
+
+}
+
+.menu nav ul {
+    display: flex;
+}
+
+.menu nav ul li {
+    margin: 16px 20px;
+    list-style: none;
+    padding: 00px;
+}
+
+.menu nav ul li a {
+    color: #fcfcfc;
+    font-size: 13px;
+    position: center;
+}
+
+.menu nav ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.body {
+    background: transparent;
+}
+
+.btn_quote {
+    /* Hace que el botón se muestre como un bloque */
+    display: block;
+
+    /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
+    padding: 8px 40px;
+
+    /* Añade un borde sólido de 2px del color de texto primario */
+    border: 2px solid rgb(255, 255, 255);
+
+    /* Aplica bordes redondeados de 8px al botón */
+    border-radius: 8px;
+
+    /* Hace el texto más grueso */
+    font-weight: 500;
+
+    /* Aplica el color de texto terciario al texto del botón */
+    color: rgb(255, 255, 255);
+
+    /* Añade un margen lateral de 20px */
+    margin: 0px 20px;
+
+    /* Aplica una transición suave de 300ms a todas las propiedades */
+    transition: all 300ms;
+
+}
+
+.btn_quote:hover {
+    color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.socialMedia {
+    display: flex;
+    position: relative;
+    margin: 50px;
+}
+
+.socialMedia img {
+    width: 20px;
+    margin: 10px;
+
+}
+
+.accordion {
+    position: relative;
+    cursor: pointer;
+    padding: 0px;
+    width: 170px;
+    color: white;
+    font-size: 13px;
+}
+
+.accordion .content {
+    display: none;
+    background-color: rgba(213, 7, 7, 0);
+    padding: 0px;
+    /* Ajuste del padding interno */
+    border: transparent;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 120%;
+    color: black;
+    line-height: 100%;
+    text-align: center;
+
+}
+
+.accordion:hover .content {
+    display: block;
+}
+
+.accordion .content ul li {
+    margin-bottom: 10px;
+    /* Espaciado entre los elementos de la lista */
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+.accordion nav ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/* /Portada Inicio/ */
+
+.container__cover {
+    /* Añade un relleno (padding) en la parte superior e inferior de 100px */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    /* Aplica un color de fondo definido por la variable CSS --main_color-secundary */
+    background: url(../img/img_fondo/PRESENTACIÓN\ LOGO\ -\ SEMUT_pages-to-jpg-0019.jpg);
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+
+}
+
+.cover {
+    /* Limita el ancho máximo del contenedor a 1200px */
+    max-width: 1200px;
+
+    /* Centra horizontalmente el contenedor dentro de su padre */
+    margin: auto;
+
+    /* Añade un margen superior de 100px para separar del contenido anterior */
+    margin-top: 100px;
+
+    /* Usa flexbox para alinear los elementos hijos */
+    display: flex;
+
+    /* Alinea verticalmente los elementos hijos al centro */
+    align-items: center;
+
+    /* Añade un relleno lateral de 20px para dar espacio interno */
+    padding: 0px 20px;
+}
+
+.text__cover {
+    /* Ocupa el 100% del ancho disponible */
+    width: 100%;
+
+    /* Añade un relleno a la derecha de 150px para separar del contenido adyacente */
+    padding-right: 150px;
+}
+
+.text__cover h2 {
+
+    color: rgb(222, 215, 215);
+    position: absolute;
+    top: 46%;
+    /* Baja la imagen al centro vertical */
+    transform: translateY(-30%);
+    /* Ajusta para centrar verticalmente */
+    left: 32%;
+    /* Añade un estilo de brillo al título */
+    text-shadow: 0px 0px 10px #ffffff3c;
+    text-align: center;
+    text-align: left 100%;
+
+}
+
+.btn__text {
+    /* Define que el botón se mostrará como un bloque ocupando todo el ancho */
+    display: block;
+
+    /* Fija un ancho de 150px para el botón */
+    width: 150px;
+
+    /* Añade un margen superior de 40px para separarlo del contenido anterior */
+    margin-top: 40px;
+
+    /* Añade un relleno de 10px en la parte superior/inferior y 20px en los laterales */
+    padding: 10px 20px;
+
+    /* Centra el texto dentro del botón */
+    text-align: center;
+
+    /* Aplica un peso de fuente de 500 para hacer el texto más grueso */
+    font-weight: 500;
+
+    /* Aplica el color de fondo definido por la variable --main_color-primary */
+    background: var(--main_color-primary);
+
+    /* Define el color del texto como blanco */
+    color: white;
+
+    /* Aplica bordes redondeados de 8px */
+    border-radius: 8px;
+
+    /* Quita el borde predeterminado y lo hace transparente */
+    border: 2px solid transparent;
+
+    /* Cambia el cursor a pointer al pasar sobre el botón (indicando que es clicable) */
+    cursor: pointer;
+
+    /* Aplica una transición suave de 300ms a todas las propiedades del botón */
+    transition: all 300ms;
+}
+
+.btn__text:hover {
+    /* Al pasar el cursor, cambia el fondo a transparente */
+    background: transparent;
+
+    /* Aplica un borde sólido del color definido por la variable --main_color-primary */
+    border: 2px solid var(--main_color-primary);
+
+    /* Cambia el color del texto usando la variable --color_text-tertiary */
+    color: var(--color_text-tertiary);
+}
+
+.image__cover {
+    /* Ocupa el 100% del ancho disponible para la imagen */
+    width: 100%;
+}
+
+.image__cover img {
+    /* Establece un ancho fijo de 550px para la imagen */
+    width: 550px;
+}
+
+/* .image__cover {
+    width: 100%;
+    height: 700px;
+    background: hsla(0, 41%, 44%, 0.506);
+    background: -webkit-linear-gradient(to right, hsla(0, 94%, 48%, 0.575), hsla(202, 90%, 38%, 0.616)), url(../img/img_fondo/CAMIONETA-LOGO-1[1].jpg);
+    background: linear-gradient(to right, hsla(29, 74%, 24%, 0.616), hsla(202, 92%, 41%, 0.589)), url(../img/img_fondo/CAMIONETA-LOGO-1[1].jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+} */
+
+/* /End Portada Inicio/ */
+
+/*End Portada Inicio*/
+
+/*Estilos Generales Cards*/
+
+.container__card-primary{
+    padding-top: 100px;
+}
+
+.card__primary{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.text__card-primary{
+    max-width: 800px;
+    margin: auto;
+}
+
+.text__card-primary p{
+    color: var(--color_text-primary);
+    letter-spacing: 4px;
+    font-size: var(--text_paragraph);
+    font-weight: 500;
+}
+
+.text__card-primary h1{
+    font-size: var(--text_size_title);
+    font-weight: 600;
+    color: var(--color_text-secundary);
+}
+
+.container__box-cardPrimary{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.box__card-primary{
+    max-width: 350px;
+    padding: 60px 40px;
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    margin: 14px;
+    transition: all 300ms;
+}
+
+.box__card-primary:hover{
+    border: 1px solid transparent;
+    box-shadow: var(--box_shadow-primary);
+}
+
+.box__card-primary h2{
+    font-size: var(--text_title_card);
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.box__card-primary p{
+    margin-top: 20px;
+}
+
+/*End Estilos Generales Cards*/
+
+/*Sobre Nosotros*/
+
+.container__about{
+    padding: 100px 0px;
+    background: var(--background-color);
+    margin-top: 100px;
+}
+
+.about{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text__about{
+    width: 100%;
+    padding-right: 40px;
+}
+
+.text__about h1{
+    color: var(--color_text-secundary);
+    font-weight: 600;
+}
+
+.text__about p{
+    font-size: var(--text_paragraph);
+    margin-top: 40px;
+    color: var(--color_text-tertiary);
+}
+
+
+.image__about{
+    width: 100%;
+    display: flex;
+}
+
+.image__about img{
+    width: 300px;
+}
+
+/*End Sobre Nosotros*/
+
+/*Servicios*/
+
+.card__service img{
+    width: 50px;
+}
+
+.card__service i{
+    font-size: 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: var(--color_text-primary);
+}
+
+/*End Servicios*/
+
+/*Proyectos*/
+
+.container__proyect{
+    padding: 100px 0px;
+    background: var(--background-color);
+    margin-top: 100px;
+}
+
+.container__card-proyect {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card__proyect {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #fff;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+}
+
+.card__proyect h2, .card__proyect p {
+    margin: 0;
+}
