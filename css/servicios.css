@@ -43,9 +43,9 @@ header{
     text-decoration: background-color 0.3s ease;
     top: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
     justify-content: center;
-}  
+}
 
 .menu nav {
     margin: 0px 20px;
@@ -70,7 +70,8 @@ header{
 .body{
     background-color: rgb(255, 255, 255);
 }
-.btn_quote {
+
+.container__cover{
 /* Hace que el botón se muestre como un bloque */
 display: block;
 
@@ -84,7 +85,7 @@ border: 2px solid rgb(255, 255, 255);
 border-radius: 8px;
 
 /* Hace el texto más grueso */
-font-weight: 500;
+font-weight: 700;
 
 /* Aplica el color de texto terciario al texto del botón */
 color:rgb(255, 255, 255);
@@ -96,7 +97,7 @@ margin: 0px 20px;
 transition: all 300ms;
 
 }
-.btn_quote:hover{
+.text__cover:hover{
     color: #000000;
     background: rgb(255, 255, 255) ;
 }
@@ -120,7 +121,7 @@ transition: all 300ms;
     font-size: 13px;
 
 }
-  
+
 .accordion .content {
     display: none;
     background-color: white;
@@ -132,11 +133,7 @@ transition: all 300ms;
     width: 120%;
     color: black;
     line-height: 3;
-} 
-  .accordion:hover .content {
+}
+.accordion:hover .content {
     display: block;
-  }
-
-  
-
-
+}

@@ -8,168 +8,118 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Reset de márgenes y padding para asegurar consistencia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del contenedor del encabezado */
 header {
-    background-color: transparent;
-    display: flex;
+    position: fixed; /* Fijo en la parte superior */
     width: 100%;
-    height: 100px;
-    position: fixed;
-    z-index: 100;
+    background-color: rgb(255, 255, 255); /* Fondo blanco con opacidad */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
 
 }
 
+/* Estilos para el contenedor del encabezado */
 .container_header {
-    background-color: rgb(12, 11, 11);
-    max-width: 1600px;
-    height: 100%;
     display: flex;
-    margin: auto;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 0.01%;
-
-}
-
-.logo {
-    display: flex;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    padding: 0px 10px;
 }
 
+/* Estilos del logo */
 .logo img {
-    width: 107px;
-
+    max-height: 60px; /* Limita la altura del logo */
 }
 
+/* Estilos de la barra de menú */
 .menu {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: transparent;
-    text-decoration: background-color 0.3s ease;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    justify-content: center;
+    background-color: #d90000; /* Color de fondo de la barra */
+    padding: 10px 45px;
 }
 
-.menu nav {
-    margin: 0px 20px;
-
-}
-
+/* Estilos de los enlaces del menú */
 .menu nav ul {
     display: flex;
+    list-style-type: none;
 }
 
 .menu nav ul li {
-    margin: 16px 20px;
-    list-style: none;
-    padding: 00px;
+    position: relative; /* Posiciona los elementos relativos para las sublistas */
+    margin: 0 15px; /* Espacio entre elementos */
+
 }
 
 .menu nav ul li a {
-    color: #fcfcfc;
-    font-size: 13px;
-    position: center;
+    color: #000000; /* Color del texto del menú */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s; /* Transición para color y transformación */
 }
 
+/* Efecto al pasar el ratón sobre los enlaces del menú */
 .menu nav ul li a:hover {
-    color: rgb(0, 0, 0);
+    color: #ffee00; /* Color dorado al pasar el ratón */
+    transform: translateY(-3px); /* Levantar el texto ligeramente */
 }
 
-.body {
-    background: transparent;
-}
-
+/* Estilos para el botón de iniciar sesión */
 .btn_quote {
-    /* Hace que el botón se muestre como un bloque */
-    display: block;
-
-    /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
-    padding: 8px 40px;
-
-    /* Añade un borde sólido de 2px del color de texto primario */
-    border: 2px solid rgb(255, 255, 255);
-
-    /* Aplica bordes redondeados de 8px al botón */
-    border-radius: 8px;
-
-    /* Hace el texto más grueso */
-    font-weight: 500;
-
-    /* Aplica el color de texto terciario al texto del botón */
-    color: rgb(255, 255, 255);
-
-    /* Añade un margen lateral de 20px */
-    margin: 0px 20px;
-
-    /* Aplica una transición suave de 300ms a todas las propiedades */
-    transition: all 300ms;
-
+    background-color: #ffffff; /* Fondo blanco para el botón */
+    color: #d90000; /* Color del texto del botón */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px; /* Bordes redondeados */
+    border: 2px solid #d90000; /* Borde rojo */
+    transition: background-color 0.3s, transform 0.3s; /* Transición para efecto suave */
+    margin-left: auto; /* Alinear a la derecha */
 }
 
+/* Efecto al pasar el ratón sobre el botón */
 .btn_quote:hover {
-    color: #000000;
-    background: rgb(255, 255, 255);
-}
-
-.socialMedia {
-    display: flex;
-    position: relative;
-    margin: 50px;
-}
-
-.socialMedia img {
-    width: 20px;
-    margin: 10px;
-
-}
-
-.accordion {
-    position: relative;
-    cursor: pointer;
-    padding: 0px;
-    width: 170px;
-    color: white;
-    font-size: 13px;
+    background-color: #d90000; /* Cambiar a rojo */
+    color: #ffffff; /* Cambiar texto a blanco */
+    transform: translateY(-3px); /* Levantar el botón ligeramente */
 }
 
 .accordion .content {
-    display: none;
-    background-color: rgba(213, 7, 7, 0);
-    padding: 0px;
-    /* Ajuste del padding interno */
-    border: transparent;
-    position: absolute;
+    display: none; /* Ocultar contenido por defecto */
+    position: absolute; /* Posicionar el menú desplegable */
+    background-color: rgba(168, 151, 151, 0.8); /* Fondo del menú desplegable */
     top: 100%;
     left: 0;
-    width: 120%;
-    color: black;
-    line-height: 100%;
-    text-align: center;
-
+    z-index: 999; /* Asegura que el menú desplegable esté por encima */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
 }
 
 .accordion:hover .content {
-    display: block;
+    display: block; /* Mostrar contenido al pasar el mouse */
 }
 
-.accordion .content ul li {
-    margin-bottom: 10px;
-    /* Espaciado entre los elementos de la lista */
-    box-sizing: border-box;
-    position: relative;
-    width: 100%;
-    flex-wrap: wrap;
+/* Estilos para las redes sociales */
+.socialMedia {
     display: flex;
-    padding: 10px;
-    align-content: center;
-    align-items: center;
+    align-items: center; /* Centrar verticalmente */
 }
 
-.accordion nav ul li a:hover {
-    color: rgb(0, 0, 0);
+.socialMedia img {
+    max-height: 30px; /* Limitar la altura de los íconos de redes sociales */
+    margin-left: 15px; /* Espacio entre los íconos */
+    transition: transform 0.3s; /* Transición para efecto de zoom */
+}
+
+/* Efecto al pasar el ratón sobre los íconos de redes sociales */
+.socialMedia img:hover {
+    transform: scale(1.1); /* Agrandar íconos ligeramente al pasar el ratón */
 }
 
 
@@ -182,12 +132,11 @@ header {
 
     /* Aplica un color de fondo definido por la variable CSS --main_color-secundary */
     background: url(../img/img_fondo/PRESENTACIÓN\ LOGO\ -\ SEMUT_pages-to-jpg-0019.jpg);
-    height: 700px;
+    height: 750px;
     width: 100%;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-
 
 }
 
@@ -217,13 +166,14 @@ header {
 
     /* Añade un relleno a la derecha de 150px para separar del contenido adyacente */
     padding-right: 150px;
+
 }
 
 .text__cover h2 {
 
     color: rgb(222, 215, 215);
     position: absolute;
-    top: 46%;
+    top: 42.5%;
     /* Baja la imagen al centro vertical */
     transform: translateY(-30%);
     /* Ajusta para centrar verticalmente */
@@ -305,7 +255,6 @@ header {
     position: relative;
 } */
 
-/* /End Portada Inicio/ */
 
 /*End Portada Inicio*/
 
@@ -313,6 +262,7 @@ header {
 
 .container__card-primary{
     padding-top: 100px;
+    background-color: #d3d3d3;
 }
 
 .card__primary{
@@ -320,6 +270,7 @@ header {
     margin: auto;
     text-align: center;
     padding: 0px 20px;
+    
 }
 
 .text__card-primary{
@@ -350,7 +301,7 @@ header {
 .box__card-primary{
     max-width: 350px;
     padding: 60px 40px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #a9902e;
     border-radius: 20px;
     margin: 14px;
     transition: all 300ms;
@@ -371,14 +322,20 @@ header {
     margin-top: 20px;
 }
 
+
 /*End Estilos Generales Cards*/
 
 /*Sobre Nosotros*/
 
 .container__about{
-    padding: 100px 0px;
-    background: var(--background-color);
-    margin-top: 100px;
+    font-family: 'Arial', sans-serif; /* Fuente general de la página */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina relleno predeterminado */
+    color: #333; /* Color del texto en todo el documento */
+    text-align: center; /* Centra el texto y el contenido dentro del contenedor */
+    padding: 50px; /* Espaciado interno para mayor respiración entre elementos */
+    background-color: #e0d4b0; /* Fondo cálido para el contenedor principal */
+    min-height: 50vh; /* Hace que el fondo tenga como mínimo la altura de la pantalla */
 }
 
 .about{
@@ -393,17 +350,59 @@ header {
 .text__about{
     width: 100%;
     padding-right: 40px;
+
 }
 
 .text__about h1{
-    color: var(--color_text-secundary);
-    font-weight: 600;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c2c2c; /* Gris oscuro */
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .text__about p{
-    font-size: var(--text_paragraph);
-    margin-top: 40px;
-    color: var(--color_text-tertiary);
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.2;
+}
+
+.btn__text-about {
+    /* Hace que el botón se muestre como un bloque */
+    display: block;
+
+    background-color: #174217;
+    
+    /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
+    padding: 10px 50px;
+    
+    /* Añade un borde sólido de 2px del color de texto primario */
+    border: 2px solid rgb(248, 248, 248);
+    
+    /* Aplica bordes redondeados de 8px al botón */
+    border-radius: 8px;
+    
+    /* Hace el texto más grueso */
+    font-weight: 500;
+    
+    /* Aplica el color de texto terciario al texto del botón */
+    color: rgb(255, 255, 255);
+    
+    /* Añade un margen lateral de 20px */
+    margin: 30px 20px;
+    
+    /* Aplica una transición suave de 300ms a todas las propiedades */
+    transition: all 300ms;
+    
+}
+    
+.btn__text-about:hover {
+    color: #000000;
+    background: rgb(64, 64, 64);
+    
 }
 
 
@@ -414,22 +413,203 @@ header {
 
 .image__about img{
     width: 300px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    object-fit: cover; /* Para ajustar la imagen sin deformarla */
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+
 }
+
+.image__about img{
+    width: 300px;
+    height: auto;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image__about img{
+    border-radius: 50% 20% / 30% 70%; /* Forma sorprendente y única */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para hacerlas destacar */
+}
+
+.image__about img:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón sobre las imágenes */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+}
+    .iimage__about img {
+        flex-direction: column;
+    }
+
+    .btn__text-about {
+        width: 50%;
+        margin-top: 20px;
+    }
 
 /*End Sobre Nosotros*/
 
 /*Servicios*/
 
-.card__service img{
-    width: 50px;
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general de la página */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina relleno predeterminado */
+    background-color: #f2f2f2; /* Fondo suave para todo el cuerpo */
 }
 
-.card__service i{
-    font-size: 24px;
-    margin-top: 20px;
-    cursor: pointer;
-    color: var(--color_text-primary);
+/* Contenedor principal para el servicio */
+.container__service {
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
 }
+
+/* Estilo para la sección de servicio */
+.service {
+    background-color: #ffffff; /* Fondo blanco para el área de servicio */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+/* Estilo para el texto de servicio */
+.text__service {
+    margin-bottom: 40px; /* Espaciado inferior */
+}
+
+/* Estilo para el párrafo y título */
+.text__service p {
+    font-size: 1.5em; /* Tamaño de fuente para el párrafo */
+    color: #4CAF50; /* Color verde */
+    margin: 0; /* Sin márgenes */
+}
+
+.text__service h1 {
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    color: #333; /* Color del texto */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Contenedor para las tarjetas de servicio */
+.container__card-service {
+    display: flex; /* Usa Flexbox para las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples líneas */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+/* Estilos para cada tarjeta de servicio */
+.card__service {
+    background-color: #f9f9f9; /* Fondo suave para cada tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+    overflow: hidden; /* Oculta desbordamientos */
+    transition: transform 0.3s, box-shadow 0.3s; /* Suaviza el efecto de agrandamiento y sombra */
+    width: calc(33.33% - 20px); /* Ancho de la tarjeta (3 en una fila) */
+    position: relative; /* Permite el uso de pseudo-elementos */
+}
+
+/* Efecto de fondo para la tarjeta */
+.card__service::before {
+    content: ""; /* Crea un pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alineado al tope */
+    left: 0; /* Alineado a la izquierda */
+    right: 0; /* Alineado a la derecha */
+    bottom: 0; /* Alineado al fondo */
+    background: rgba(76, 175, 80, 0.1); /* Fondo verde claro */
+    z-index: 0; /* Coloca detrás del contenido */
+    transition: background 0.3s; /* Suaviza el cambio de fondo */
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card__service img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 150px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de aspecto */
+    z-index: 1; /* Coloca encima del fondo */
+}
+
+/* Estilo para el contenido dentro de cada tarjeta */
+.card__service h2 {
+    font-size: 1.5em; /* Tamaño de fuente para el título */
+    color: #333; /* Color del texto */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    z-index: 1; /* Coloca encima del fondo */
+}
+
+.card__service p {
+    font-size: 1em; /* Tamaño de fuente para el texto */
+    color: #555; /* Color del texto */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    padding: 0 15px; /* Espaciado interno lateral */
+    z-index: 1; /* Coloca encima del fondo */
+}
+
+/* Estilo para el enlace en cada tarjeta */
+.card__service a {
+    display: inline-block; /* Permite el uso de márgenes */
+    padding: 10px 20px; /* Espaciado interno para el enlace */
+    background-color: #4CAF50; /* Color verde para el enlace */
+    color: white; /* Color del texto en el enlace */
+    border-radius: 25px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.3s; /* Suaviza los efectos de cambio */
+    z-index: 1; /* Coloca encima del fondo */
+}
+
+/* Efecto hover para el enlace */
+.card__service a:hover {
+    background-color: #45a049; /* Cambia el color al pasar el ratón */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Efecto hover para la tarjeta */
+.card__service:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente al pasar el ratón */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+}
+
+/* Efecto hover para el fondo de la tarjeta */
+.card__service:hover::before {
+    background: rgba(76, 175, 80, 0.2); /* Aumenta el color de fondo al pasar el ratón */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 900px) {
+    .card__service {
+        width: calc(33.33% - 20px); /* Tres tarjetas en fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 600px) {
+    .card__service {
+        width: calc(50% - 20px); /* Dos tarjetas en fila en pantallas pequeñas */
+    }
+
+    .text__service h1 {
+        font-size: 2em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .card__service h2 {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño para el título de la tarjeta */
+    }
+}
+
+@media (max-width: 400px) {
+    .card__service {
+        width: calc(100% - 20px); /* Una tarjeta en fila en pantallas muy pequeñas */
+    }
+}
+
 
 /*End Servicios*/
 
@@ -453,7 +633,7 @@ header {
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    color: #fff;
+    color: #255180;
     text-align: left;
     background-size: cover;
     background-position: center;
