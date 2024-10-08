@@ -8,118 +8,228 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Reset de márgenes y padding para asegurar consistencia */
+/*
+   * GENERAL RESET *
+    Elimina márgenes y padding predeterminados en todos los elementos.
+    box-sizing: border-box asegura que padding y border se incluyan en el ancho y alto de los elementos.
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Tipografía global de la página */
 }
 
-/* Estilos del contenedor del encabezado */
+/*
+   * HEADER PRINCIPAL *
+    Estilos para el header: Fijo en la parte superior,
+    ocupa el 100% del ancho de la pantalla y tiene una ligera sombra para diferenciarlo del contenido.
+*/
 header {
-    position: fixed; /* Fijo en la parte superior */
+    position: fixed;
     width: 100%;
-    background-color: rgb(255, 255, 255); /* Fondo blanco con opacidad */
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
-
+    background-color: #fff; /* Fondo blanco */
+    z-index: 1000; /* Para asegurar que siempre esté visible sobre el contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Estilos para el contenedor del encabezado */
+/*
+   * CONTENEDOR DEL HEADER *
+    Utiliza flexbox para alinear el logo, menú de navegación y redes sociales. 
+    justify-content: space-between crea separación uniforme entre los elementos.
+*/
 .container_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px;
+    padding: 15px 45px; /* Espaciado interno para dar aire entre los elementos */
 }
 
-/* Estilos del logo */
+/*
+   * LOGO *
+    Establece el tamaño del logo y agrega margen para separarlo visualmente del menú de navegación.
+*/
 .logo img {
-    max-height: 60px; /* Limita la altura del logo */
+    height: 60px; /* Altura del logo */
+    margin-right: 30px; /* Espaciado entre el logo y el menú */
 }
 
-/* Estilos de la barra de menú */
+/*
+   * MENÚ DE NAVEGACIÓN *
+    El menú usa flexbox para alinear los enlaces horizontalmente.
+*/
 .menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d90000; /* Color de fondo de la barra */
-    padding: 10px 45px;
+    align-items: center; /* Alineación vertical centrada de los elementos del menú */
 }
 
-/* Estilos de los enlaces del menú */
-.menu nav ul {
+/*
+   * LISTA DE NAVEGACIÓN *
+    Elimina los estilos predeterminados de la lista y alinea los elementos del menú horizontalmente con flexbox.
+*/
+.menu ul {
     display: flex;
-    list-style-type: none;
+    list-style: none; /* Sin viñetas para la lista */
 }
 
-.menu nav ul li {
-    position: relative; /* Posiciona los elementos relativos para las sublistas */
-    margin: 0 15px; /* Espacio entre elementos */
-
+/*
+   * ELEMENTOS DEL MENÚ *
+    Cada elemento del menú está separado con un margen.
+    position: relative es importante para permitir el submenú desplegable.
+*/
+.menu ul li {
+    margin: 0 20px;
+    position: relative; /* Necesario para posicionar el dropdown */
 }
 
-.menu nav ul li a {
-    color: #000000; /* Color del texto del menú */
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s, transform 0.3s; /* Transición para color y transformación */
+/*
+   * ENLACES DEL MENÚ *
+    Estilo básico para los enlaces: color negro y tamaño de fuente.
+    Se incluye una transición suave para los efectos hover.
+*/
+.menu ul li a {
+    color: #000; /* Color de texto negro */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s, transform 0.3s; /* Animaciones suaves para color y desplazamiento */
 }
 
-/* Efecto al pasar el ratón sobre los enlaces del menú */
-.menu nav ul li a:hover {
-    color: #ffee00; /* Color dorado al pasar el ratón */
-    transform: translateY(-3px); /* Levantar el texto ligeramente */
+/*
+   * HOVER EN ENLACES DEL MENÚ *
+    Cambia el color del enlace a amarillo y lo desplaza ligeramente hacia arriba cuando el mouse pasa sobre él.
+*/
+.menu ul li a:hover {
+    color: #ffee00; /* Cambia a amarillo en hover */
+    transform: translateY(-3px); /* Desplaza ligeramente hacia arriba en hover */
 }
 
-/* Estilos para el botón de iniciar sesión */
+/*
+   * BOTÓN INICIAR SESIÓN *
+    Estilos para el botón: fondo blanco, texto rojo y bordes redondeados.
+    Incluye transición para animaciones al pasar el cursor.
+*/
 .btn_quote {
-    background-color: #ffffff; /* Fondo blanco para el botón */
-    color: #d90000; /* Color del texto del botón */
-    padding: 10px 20px;
-    text-decoration: none;
+    background-color: #fff;
+    color: #d90000; /* Texto rojo */
+    padding: 10px 20px; /* Espaciado interno del botón */
     border-radius: 30px; /* Bordes redondeados */
     border: 2px solid #d90000; /* Borde rojo */
-    transition: background-color 0.3s, transform 0.3s; /* Transición para efecto suave */
-    margin-left: auto; /* Alinear a la derecha */
+    transition: background-color 0.3s, transform 0.3s; /* Animación para hover */
+    margin-left: 30px; /* Separación con el menú */
 }
 
-/* Efecto al pasar el ratón sobre el botón */
+/*
+   * HOVER EN BOTÓN INICIAR SESIÓN *
+    Cambia el fondo a rojo y el texto a blanco cuando se pasa el cursor sobre el botón.
+*/
 .btn_quote:hover {
-    background-color: #d90000; /* Cambiar a rojo */
-    color: #ffffff; /* Cambiar texto a blanco */
-    transform: translateY(-3px); /* Levantar el botón ligeramente */
+    background-color: #d90000; /* Fondo rojo en hover */
+    color: #fff; /* Texto blanco en hover */
+    transform: translateY(-3px); /* Desplaza ligeramente hacia arriba en hover */
 }
 
+/*
+   * SUBMENÚ (DROPDOWN) *
+    Oculto por defecto, este submenú se despliega cuando se pasa el mouse
+    sobre el elemento "Sobre nosotros" en el menú principal.
+*/
 .accordion .content {
-    display: none; /* Ocultar contenido por defecto */
-    position: absolute; /* Posicionar el menú desplegable */
-    background-color: rgba(168, 151, 151, 0.8); /* Fondo del menú desplegable */
-    top: 100%;
-    left: 0;
-    z-index: 999; /* Asegura que el menú desplegable esté por encima */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    list-style: none; /* Eliminar viñetas de lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    position: absolute; /* Submenú flotante sobre el ítem del menú */
+    left: 0; /* Alinear el submenú con el ítem padre */
+    top: 100%; /* Colocar el submenú debajo del ítem del menú */
+    display: none; /* Ocultar el submenú por defecto */
+    background-color: rgba(68, 68, 68, 0.9); /* Fondo oscuro con transparencia */
+    transition: all 0.3s ease-in-out; /* Transición suave para la aparición del submenú */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    padding: 10px 0; /* Padding vertical para los ítems */
 }
 
+/* ===== Mostrar Contenido al Pasar el Mouse ===== */
 .accordion:hover .content {
     display: block; /* Mostrar contenido al pasar el mouse */
+    animation: slideDown 0.3s ease-in-out forwards; /* Aplicar animación de deslizamiento */
 }
 
-/* Estilos para las redes sociales */
+/* ===== Animación de Deslizamiento Vertical ===== */
+@keyframes slideDown {
+    from {
+        opacity: 0; /* Inicia invisible */
+        transform: translateY(-20px); /* Inicia más arriba */
+    }
+    to {
+        opacity: 1; /* Totalmente visible */
+        transform: translateY(0); /* En su posición final */
+    }
+}
+
+/*
+   * ELEMENTOS DEL SUBMENÚ *
+    Margen inferior entre cada elemento para separarlos visualmente.
+*/
+.accordion .content ul {
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+
+.accordion .content ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    
+}
+
+/*
+   * ENLACES DEL SUBMENÚ *
+    Los enlaces del submenú ocupan el 100% de su contenedor,
+    con un padding adicional para facilitar la interacción.
+*/
+.accordion .content ul li a {
+    color: #fff; /* Color blanco del texto */
+    padding: 12px 20px; /* Espacio interno ajustado */
+    display: block; /* Enlace ocupa todo el ancho disponible */
+    border-radius: 4px; /* Bordes redondeados para los enlaces */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para hover */
+    
+}
+
+/*
+   * HOVER EN ENLACES DEL SUBMENÚ *
+    Cambia el fondo a un color más brillante cuando se pasa el cursor sobre los enlaces del submenú.
+*/
+.accordion .content ul li a:hover {
+    background-color: #ffee00; /* Fondo amarillo en hover */
+    transform: scale(1.05); /* Escala ligeramente el enlace para un efecto de "pop" */
+}
+
+
+/*
+   * REDES SOCIALES *
+    Flexbox alinea los íconos de redes sociales en línea.
+*/
 .socialMedia {
     display: flex;
-    align-items: center; /* Centrar verticalmente */
+    align-items: center; /* Alineación vertical centrada de los íconos */
 }
 
+/*
+   * ÍCONOS DE REDES SOCIALES *
+    Tamaño de los íconos y espaciado entre ellos.
+    Añade una transición suave para agrandarlos al pasar el cursor.
+*/
 .socialMedia img {
-    max-height: 30px; /* Limitar la altura de los íconos de redes sociales */
-    margin-left: 15px; /* Espacio entre los íconos */
-    transition: transform 0.3s; /* Transición para efecto de zoom */
+    height: 30px; /* Tamaño del ícono */
+    margin-left: 15px; /* Separación entre íconos */
+    transition: transform 0.3s; /* Animación suave para hover */
 }
 
-/* Efecto al pasar el ratón sobre los íconos de redes sociales */
+/*
+   * HOVER EN ÍCONOS DE REDES SOCIALES *
+Agranda el ícono ligeramente al pasar el cursor sobre él.
+*/
 .socialMedia img:hover {
-    transform: scale(1.1); /* Agrandar íconos ligeramente al pasar el ratón */
+    transform: scale(1.1); /* Aumenta el tamaño del ícono en hover */
 }
 
 
@@ -137,6 +247,7 @@ header {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    
 
 }
 
@@ -258,69 +369,132 @@ header {
 
 /*End Portada Inicio*/
 
-/*Estilos Generales Cards*/
+/* ===== Estilos Generales Cards ===== */
 
-.container__card-primary{
-    padding-top: 100px;
-    background-color: #d3d3d3;
+/* Contenedor principal de la sección de tarjetas */
+.container__card-primary {
+    padding-top: 100px; /* Espaciado superior para separar del contenido anterior */
+    background-color: #d3d3d3; /* Color de fondo gris claro para contrastar con las tarjetas */
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional para todo el texto */
 }
 
-.card__primary{
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 0px 20px;
-    
+/* Contenedor de las tarjetas, centrado en la página */
+.card__primary {
+    max-width: 1200px; /* Ancho máximo del contenedor para controlar el diseño en pantallas grandes */
+    margin: auto; /* Centrar el contenedor horizontalmente */
+    text-align: center; /* Alinear el texto en el centro de las tarjetas */
+    padding: 0px 20px; /* Añadir espaciado interno para no pegar el contenido a los bordes */
 }
 
-.text__card-primary{
-    max-width: 800px;
-    margin: auto;
+/* Contenedor de la cabecera de la sección (texto principal) */
+.text__card-primary {
+    max-width: 800px; /* Limitar el ancho para mejorar la legibilidad */
+    margin: auto; /* Centrar la cabecera */
+    margin-bottom: 40px; /* Añadir espacio debajo del texto para separarlo de las tarjetas */
 }
 
-.text__card-primary p{
-    color: var(--color_text-primary);
-    letter-spacing: 4px;
-    font-size: var(--text_paragraph);
-    font-weight: 500;
+/* Estilos del texto descriptivo de la cabecera */
+.text__card-primary p {
+    color: var(--color_text-primary); /* Color del texto principal definido en variables */
+    letter-spacing: 4px; /* Espaciado entre letras para un aspecto más elegante */
+    font-size: 18px; /* Tamaño de fuente para el párrafo */
+    font-weight: 500; /* Peso de fuente medio para un texto más sólido */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
 }
 
-.text__card-primary h1{
-    font-size: var(--text_size_title);
-    font-weight: 600;
-    color: var(--color_text-secundary);
+/* Estilos del título principal de la cabecera */
+.text__card-primary h1 {
+    font-size: 2.5rem; /* Tamaño de fuente grande para dar énfasis al título */
+    font-weight: 700; /* Peso de fuente alto para hacer el texto más prominente */
+    color: var(--color_text-secundary); /* Color del título, definido en variables */
+    text-transform: uppercase; /* Título en mayúsculas para mayor impacto visual */
+    letter-spacing: 2px; /* Espaciado entre letras para estilizar el título */
+    margin-top: 10px; /* Pequeño espacio superior entre el título y el párrafo */
 }
 
-.container__box-cardPrimary{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
+/* ===== Contenedor de las Tarjetas ===== */
+
+/* Contenedor de todas las tarjetas, con flexbox para organizar las columnas */
+.container__box-cardPrimary {
+    display: flex; /* Usamos flexbox para alinear las tarjetas en fila */
+    flex-wrap: wrap; /* Permitir que las tarjetas se adapten a múltiples filas en pantallas pequeñas */
+    justify-content: center; /* Centrar las tarjetas en el contenedor */
+    gap: 30px; /* Espacio entre cada tarjeta */
+    margin-top: 40px; /* Espacio entre el texto principal y las tarjetas */
 }
 
-.box__card-primary{
-    max-width: 350px;
-    padding: 60px 40px;
-    border: 1px solid #a9902e;
-    border-radius: 20px;
-    margin: 14px;
-    transition: all 300ms;
+/* ===== Estilos de las Tarjetas ===== */
+
+/* Estilos individuales de cada tarjeta */
+.box__card-primary {
+    max-width: 350px; /* Ancho máximo de cada tarjeta */
+    padding: 40px; /* Espaciado interno para el contenido de la tarjeta */
+    border: 1px solid #a9902e; /* Borde sólido en color dorado */
+    border-radius: 20px; /* Bordes redondeados para un diseño más suave */
+    margin: 14px; /* Espaciado externo para separar las tarjetas */
+    transition: all 300ms ease-in-out; /* Transición suave para efectos al pasar el mouse */
+    background-color: #fff; /* Fondo blanco de las tarjetas para contrastar con el fondo gris */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad a las tarjetas */
 }
 
-.box__card-primary:hover{
-    border: 1px solid transparent;
-    box-shadow: var(--box_shadow-primary);
+/* Efecto hover para las tarjetas */
+.box__card-primary:hover {
+    border: 1px solid transparent; /* Remover el borde dorado al hacer hover */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom al hacer hover para resaltar la tarjeta */
 }
 
-.box__card-primary h2{
-    font-size: var(--text_title_card);
-    margin-top: 40px;
-    font-weight: 500;
+/* ===== Estilos de las Imágenes ===== */
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.box__card-primary img {
+    width: 100px; /* Ancho fijo de las imágenes */
+    height: 100px; /* Alto fijo de las imágenes */
+    object-fit: cover; /* Asegurar que las imágenes se ajusten bien sin deformarse */
+    border-radius: 50%; /* Convertir las imágenes en círculos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor de las imágenes */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de rotación */
 }
 
-.box__card-primary p{
-    margin-top: 20px;
+/* Efecto hover para las imágenes */
+.box__card-primary:hover img {
+    transform: rotate(10deg); /* Rotar ligeramente la imagen al hacer hover */
 }
+
+/* ===== Estilos del Título de las Tarjetas ===== */
+
+/* Estilos para los títulos dentro de cada tarjeta */
+.box__card-primary h2 {
+    font-size: 1.5rem; /* Tamaño de fuente para los títulos de las tarjetas */
+    margin-top: 20px; /* Espaciado entre la imagen y el título */
+    font-weight: 600; /* Peso de fuente más grueso para resaltar el título */
+    color: #333; /* Color oscuro para el título */
+    text-transform: capitalize; /* Capitalizar solo la primera letra de cada palabra */
+}
+
+/* ===== Estilos del Texto de las Tarjetas ===== */
+
+/* Estilos para los párrafos dentro de cada tarjeta */
+.box__card-primary p {
+    margin-top: 15px; /* Espacio entre el título y el párrafo */
+    font-size: 1rem; /* Tamaño de fuente estándar para el cuerpo del texto */
+    color: #666; /* Color gris para el texto */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    font-weight: 300; /* Peso de fuente ligero para el texto descriptivo */
+}
+
+/* ===== Ajustes en Transiciones ===== */
+
+/* Cambios de color en los títulos cuando el mouse está sobre la tarjeta */
+.box__card-primary:hover h2 {
+    color: #a9902e; /* Cambiar el color del título a dorado al hacer hover */
+}
+
+/* Cambios de color en los párrafos cuando el mouse está sobre la tarjeta */
+.box__card-primary:hover p {
+    color: #333; /* Cambiar el color del texto a oscuro al hacer hover */
+}
+
 
 
 /*End Estilos Generales Cards*/
@@ -368,6 +542,7 @@ header {
     max-width: 600px;
     margin: auto;
     line-height: 1.2;
+    text-align: left;
 }
 
 .btn__text-about {
@@ -400,7 +575,7 @@ header {
 }
     
 .btn__text-about:hover {
-    color: #000000;
+    color: #ffffff;
     background: rgb(64, 64, 64);
     
 }
@@ -490,6 +665,7 @@ body {
     font-size: 1.5em; /* Tamaño de fuente para el párrafo */
     color: #4CAF50; /* Color verde */
     margin: 0; /* Sin márgenes */
+    padding: 25px;
 }
 
 .text__service h1 {
@@ -641,4 +817,90 @@ body {
 
 .card__proyect h2, .card__proyect p {
     margin: 0;
+}
+
+
+/* Estilos generales para el pie de página */
+footer {
+    background: linear-gradient(135deg, #3a6186, #174217); /* Fondo degradado */
+    color: white; /* Color del texto */
+    padding: 40px 0; /* Espaciado interno */
+    position: relative; /* Posicionamiento relativo */
+    overflow: hidden; /* Oculta contenido desbordante */
+}
+
+/* Contenedor del pie de página */
+.footer-container {
+    display: flex; /* Distribución en fila */
+    justify-content: space-evenly; /* Espaciado uniforme entre bloques */
+    align-items: flex-start; /* Alinea elementos al inicio verticalmente */
+    flex-wrap: wrap; /* Permite el ajuste de bloques en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado automático del contenedor */
+    text-align: center; /* Alineación centrada del texto */
+}
+
+/* Estilos individuales para cada bloque de contenido */
+.footer-content {
+    flex: 1; /* Distribuye el espacio equitativamente */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves en hover */
+}
+
+/* Estilos para los encabezados de cada bloque */
+.footer-content h4 {
+    font-size: 18px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos para los párrafos de cada bloque */
+.footer-content p {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #f2f2f2; /* Color gris claro */
+    border-bottom: 2px solid #f2f2f2; /* Línea inferior decorativa */
+    padding-bottom: 10px; /* Espaciado inferior antes de la línea */
+}
+
+/* Efecto de hover para los bloques de contenido */
+.footer-content:hover {
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra de elevación */
+}
+
+/* Estilos para el título final del pie de página */
+.footer-title {
+    text-align: center; /* Texto centrado */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: 300; /* Peso ligero de la fuente */
+    color: #fff; /* Color blanco */
+    margin-top: 30px; /* Espaciado superior */
+}
+
+/* Línea decorativa debajo del título */
+.footer-title:after {
+    content: ''; /* Elemento pseudo vacío */
+    display: block; /* Comportamiento de bloque */
+    width: 100px; /* Ancho de la línea */
+    height: 2px; /* Altura de la línea */
+    background: white; /* Color de la línea */
+    margin: 10px auto; /* Centrado de la línea */
+}
+
+/* Estilos para los iconos dentro de los bloques */
+footer i {
+    font-size: 18px; /* Tamaño del icono */
+    color: #ffcc00; /* Color amarillo para destacar */
+    margin-right: 8px; /* Espaciado a la derecha del icono */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center; /* Centra los bloques verticalmente */
+    }
+
+    .footer-content {
+        margin-bottom: 20px; /* Espaciado inferior entre bloques */
+    }
 }
