@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+   * GENERAL RESET *
+    Elimina márgenes y padding predeterminados en todos los elementos.
+    box-sizing: border-box asegura que padding y border se incluyan en el ancho y alto de los elementos.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Tipografía global de la página */
+}
+
+/*
+   * HEADER PRINCIPAL *
+    Estilos para el header: Fijo en la parte superior,
+    ocupa el 100% del ancho de la pantalla y tiene una ligera sombra para diferenciarlo del contenido.
+*/
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff; /* Fondo blanco */
+    z-index: 1000; /* Para asegurar que siempre esté visible sobre el contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/*
+   * CONTENEDOR DEL HEADER *
+    Utiliza flexbox para alinear el logo, menú de navegación y redes sociales. 
+    justify-content: space-between crea separación uniforme entre los elementos.
+*/
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 45px; /* Espaciado interno para dar aire entre los elementos */
+}
+
+/*
+   * LOGO *
+    Establece el tamaño del logo y agrega margen para separarlo visualmente del menú de navegación.
+*/
+.logo img {
+    height: 60px; /* Altura del logo */
+    margin-right: 30px; /* Espaciado entre el logo y el menú */
+}
+
+/*
+   * MENÚ DE NAVEGACIÓN *
+    El menú usa flexbox para alinear los enlaces horizontalmente.
+*/
+.menu {
+    display: flex;
+    align-items: center; /* Alineación vertical centrada de los elementos del menú */
+}
+
+/*
+   * LISTA DE NAVEGACIÓN *
+    Elimina los estilos predeterminados de la lista y alinea los elementos del menú horizontalmente con flexbox.
+*/
+.menu ul {
+    display: flex;
+    list-style: none; /* Sin viñetas para la lista */
+}
+
+/*
+   * ELEMENTOS DEL MENÚ *
+    Cada elemento del menú está separado con un margen.
+    position: relative es importante para permitir el submenú desplegable.
+*/
+.menu ul li {
+    margin: 0 20px;
+    position: relative; /* Necesario para posicionar el dropdown */
+}
+
+/*
+   * ENLACES DEL MENÚ *
+    Estilo básico para los enlaces: color negro y tamaño de fuente.
+    Se incluye una transición suave para los efectos hover.
+*/
+.menu ul li a {
+    color: #000; /* Color de texto negro */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s, transform 0.3s; /* Animaciones suaves para color y desplazamiento */
+}
+
+/*
+   * HOVER EN ENLACES DEL MENÚ *
+    Cambia el color del enlace a amarillo y lo desplaza ligeramente hacia arriba cuando el mouse pasa sobre él.
+*/
+.menu ul li a:hover {
+    color: #ffee00; /* Cambia a amarillo en hover */
+    transform: translateY(-3px); /* Desplaza ligeramente hacia arriba en hover */
+}
+
+/*
+   * BOTÓN INICIAR SESIÓN *
+    Estilos para el botón: fondo blanco, texto rojo y bordes redondeados.
+    Incluye transición para animaciones al pasar el cursor.
+*/
+.btn_quote {
+    background-color: #fff;
+    color: #d90000; /* Texto rojo */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 30px; /* Bordes redondeados */
+    border: 2px solid #d90000; /* Borde rojo */
+    transition: background-color 0.3s, transform 0.3s; /* Animación para hover */
+    margin-left: 30px; /* Separación con el menú */
+}
+
+/*
+   * HOVER EN BOTÓN INICIAR SESIÓN *
+    Cambia el fondo a rojo y el texto a blanco cuando se pasa el cursor sobre el botón.
+*/
+.btn_quote:hover {
+    background-color: #d90000; /* Fondo rojo en hover */
+    color: #fff; /* Texto blanco en hover */
+    transform: translateY(-3px); /* Desplaza ligeramente hacia arriba en hover */
+}
+
+/*
+   * SUBMENÚ (DROPDOWN) *
+    Oculto por defecto, este submenú se despliega cuando se pasa el mouse
+    sobre el elemento "Sobre nosotros" en el menú principal.
+*/
+.accordion .content {
+    list-style: none; /* Eliminar viñetas de lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    position: absolute; /* Submenú flotante sobre el ítem del menú */
+    left: 0; /* Alinear el submenú con el ítem padre */
+    top: 100%; /* Colocar el submenú debajo del ítem del menú */
+    display: none; /* Ocultar el submenú por defecto */
+    background-color: rgba(68, 68, 68, 0.9); /* Fondo oscuro con transparencia */
+    transition: all 0.3s ease-in-out; /* Transición suave para la aparición del submenú */
+    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    padding: 10px 0; /* Padding vertical para los ítems */
+}
+
+/* ===== Mostrar Contenido al Pasar el Mouse ===== */
+.accordion:hover .content {
+    display: block; /* Mostrar contenido al pasar el mouse */
+    animation: slideDown 0.3s ease-in-out forwards; /* Aplicar animación de deslizamiento */
+}
+
+/* ===== Animación de Deslizamiento Vertical ===== */
+@keyframes slideDown {
+    from {
+        opacity: 0; /* Inicia invisible */
+        transform: translateY(-20px); /* Inicia más arriba */
+    }
+    to {
+        opacity: 1; /* Totalmente visible */
+        transform: translateY(0); /* En su posición final */
+    }
+}
+
+/*
+   * ELEMENTOS DEL SUBMENÚ *
+    Margen inferior entre cada elemento para separarlos visualmente.
+*/
+.accordion .content ul {
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+
+.accordion .content ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    
+}
+
+/*
+   * ENLACES DEL SUBMENÚ *
+    Los enlaces del submenú ocupan el 100% de su contenedor,
+    con un padding adicional para facilitar la interacción.
+*/
+.accordion .content ul li a {
+    color: #fff; /* Color blanco del texto */
+    padding: 12px 20px; /* Espacio interno ajustado */
+    display: block; /* Enlace ocupa todo el ancho disponible */
+    border-radius: 4px; /* Bordes redondeados para los enlaces */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para hover */
+    
+}
+
+/*
+   * HOVER EN ENLACES DEL SUBMENÚ *
+    Cambia el fondo a un color más brillante cuando se pasa el cursor sobre los enlaces del submenú.
+*/
+.accordion .content ul li a:hover {
+    background-color: #ffee00; /* Fondo amarillo en hover */
+    transform: scale(1.05); /* Escala ligeramente el enlace para un efecto de "pop" */
+}
+
+
+/*
+   * REDES SOCIALES *
+    Flexbox alinea los íconos de redes sociales en línea.
+*/
+.socialMedia {
+    display: flex;
+    align-items: center; /* Alineación vertical centrada de los íconos */
+}
+
+/*
+   * ÍCONOS DE REDES SOCIALES *
+    Tamaño de los íconos y espaciado entre ellos.
+    Añade una transición suave para agrandarlos al pasar el cursor.
+*/
+.socialMedia img {
+    height: 30px; /* Tamaño del ícono */
+    margin-left: 15px; /* Separación entre íconos */
+    transition: transform 0.3s; /* Animación suave para hover */
+}
+
+/*
+   * HOVER EN ÍCONOS DE REDES SOCIALES *
+Agranda el ícono ligeramente al pasar el cursor sobre él.
+*/
+.socialMedia img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del ícono en hover */
+}
+
+
+/* /Portada Inicio/ */
+
+.container__cover {
+    /* Añade un relleno (padding) en la parte superior e inferior de 100px */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    /* Aplica un color de fondo definido por la variable CSS --main_color-secundary */
+    background: url(../img/img_fondo/PRESENTACIÓN\ LOGO\ -\ SEMUT_pages-to-jpg-0019.jpg);
+    height: 750px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+
+}
+
+.cover {
+    /* Limita el ancho máximo del contenedor a 1200px */
+    max-width: 1200px;
+
+    /* Centra horizontalmente el contenedor dentro de su padre */
+    margin: auto;
+
+    /* Añade un margen superior de 100px para separar del contenido anterior */
+    margin-top: 100px;
+
+    /* Usa flexbox para alinear los elementos hijos */
+    display: flex;
+
+    /* Alinea verticalmente los elementos hijos al centro */
+    align-items: center;
+
+    /* Añade un relleno lateral de 20px para dar espacio interno */
+    padding: 0px 20px;
+}
+
+.text__cover {
+    /* Ocupa el 100% del ancho disponible */
+    width: 100%;
+
+    /* Añade un relleno a la derecha de 150px para separar del contenido adyacente */
+    padding-right: 150px;
+
+}
+
+.text__cover h2 {
+
+    color: rgb(222, 215, 215);
+    position: absolute;
+    top: 42.5%;
+    /* Baja la imagen al centro vertical */
+    transform: translateY(-30%);
+    /* Ajusta para centrar verticalmente */
+    left: 32%;
+    /* Añade un estilo de brillo al título */
+    text-shadow: 0px 0px 10px #ffffff3c;
+    text-align: center;
+    text-align: left 100%;
+
+}
+
+.btn__text {
+    /* Define que el botón se mostrará como un bloque ocupando todo el ancho */
+    display: block;
+
+    /* Fija un ancho de 150px para el botón */
+    width: 150px;
+
+    /* Añade un margen superior de 40px para separarlo del contenido anterior */
+    margin-top: 40px;
+
+    /* Añade un relleno de 10px en la parte superior/inferior y 20px en los laterales */
+    padding: 10px 20px;
+
+    /* Centra el texto dentro del botón */
+    text-align: center;
+
+    /* Aplica un peso de fuente de 500 para hacer el texto más grueso */
+    font-weight: 500;
+
+    /* Aplica el color de fondo definido por la variable --main_color-primary */
+    background: var(--main_color-primary);
+
+    /* Define el color del texto como blanco */
+    color: white;
+
+    /* Aplica bordes redondeados de 8px */
+    border-radius: 8px;
+
+    /* Quita el borde predeterminado y lo hace transparente */
+    border: 2px solid transparent;
+
+    /* Cambia el cursor a pointer al pasar sobre el botón (indicando que es clicable) */
+    cursor: pointer;
+
+    /* Aplica una transición suave de 300ms a todas las propiedades del botón */
+    transition: all 300ms;
+}
+
+.btn__text:hover {
+    /* Al pasar el cursor, cambia el fondo a transparente */
+    background: transparent;
+
+    /* Aplica un borde sólido del color definido por la variable --main_color-primary */
+    border: 2px solid var(--main_color-primary);
+
+    /* Cambia el color del texto usando la variable --color_text-tertiary */
+    color: var(--color_text-tertiary);
+}
+
+.image__cover {
+    /* Ocupa el 100% del ancho disponible para la imagen */
+    width: 100%;
+}
+
+.image__cover img {
+    /* Establece un ancho fijo de 550px para la imagen */
+    width: 550px;
+}
+
+/* .image__cover {
+    width: 100%;
+    height: 700px;
+    background: hsla(0, 41%, 44%, 0.506);
+    background: -webkit-linear-gradient(to right, hsla(0, 94%, 48%, 0.575), hsla(202, 90%, 38%, 0.616)), url(../img/img_fondo/CAMIONETA-LOGO-1[1].jpg);
+    background: linear-gradient(to right, hsla(29, 74%, 24%, 0.616), hsla(202, 92%, 41%, 0.589)), url(../img/img_fondo/CAMIONETA-LOGO-1[1].jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+} */

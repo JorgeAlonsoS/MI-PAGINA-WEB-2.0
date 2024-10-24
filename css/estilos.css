@@ -36,7 +36,7 @@ header {
 
 /*
    * CONTENEDOR DEL HEADER *
-    Utiliza flexbox para alinear el logo, menú de navegación y redes sociales. 
+    Utiliza flexbox para alinear el logo, menú de navegación y redes sociales.
     justify-content: space-between crea separación uniforme entre los elementos.
 */
 .container_header {
@@ -369,135 +369,139 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
 
 /*End Portada Inicio*/
 
-/* ===== Estilos Generales Cards ===== */
+/* ===== Estilos Generales para la Sección de Confianza ===== */
 
-/* Contenedor principal de la sección de tarjetas */
+/* Contenedor principal de la sección */
 .container__card-primary {
-    padding-top: 100px; /* Espaciado superior para separar del contenido anterior */
-    background-color: #d3d3d3; /* Color de fondo gris claro para contrastar con las tarjetas */
-    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional para todo el texto */
+    padding: 80px 0; /* Espaciado superior e inferior para separar del contenido circundante */
+    background-color: #f5f5f5; /* Fondo gris claro para contrastar con las tarjetas */
+    font-family: 'Poppins', sans-serif; /* Fuente limpia y profesional */
 }
 
-/* Contenedor de las tarjetas, centrado en la página */
+/* Contenedor de todo el contenido de la sección */
 .card__primary {
-    max-width: 1200px; /* Ancho máximo del contenedor para controlar el diseño en pantallas grandes */
-    margin: auto; /* Centrar el contenedor horizontalmente */
-    text-align: center; /* Alinear el texto en el centro de las tarjetas */
-    padding: 0px 20px; /* Añadir espaciado interno para no pegar el contenido a los bordes */
+    max-width: 1200px; /* Limitar el ancho del contenedor para un diseño centrado en pantallas grandes */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    text-align: center; /* Centramos todo el texto */
+    padding: 0 20px; /* Pequeño espaciado interno para evitar que el contenido toque los bordes */
 }
 
-/* Contenedor de la cabecera de la sección (texto principal) */
+/* Estilos de la cabecera de la sección */
 .text__card-primary {
-    max-width: 800px; /* Limitar el ancho para mejorar la legibilidad */
-    margin: auto; /* Centrar la cabecera */
-    margin-bottom: 40px; /* Añadir espacio debajo del texto para separarlo de las tarjetas */
+    max-width: 800px; /* Limitar el ancho del texto para mejorar la legibilidad */
+    margin: 0 auto 40px; /* Centrar el texto y añadir margen inferior para separar del contenido principal */
 }
 
-/* Estilos del texto descriptivo de la cabecera */
 .text__card-primary p {
-    color: var(--color_text-primary); /* Color del texto principal definido en variables */
-    letter-spacing: 4px; /* Espaciado entre letras para un aspecto más elegante */
-    font-size: 18px; /* Tamaño de fuente para el párrafo */
-    font-weight: 500; /* Peso de fuente medio para un texto más sólido */
-    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    color: #555; /* Color gris oscuro para el subtítulo */
+    font-size: 1em; /* Tamaño de fuente ajustado para el subtítulo */
+    letter-spacing: 3px; /* Espaciado entre letras para elegancia */
+    font-weight: 600; /* Un poco más grueso para visibilidad */
+    text-transform: uppercase; /* Convierte todo a mayúsculas */
 }
 
-/* Estilos del título principal de la cabecera */
 .text__card-primary h1 {
-    font-size: 2.5rem; /* Tamaño de fuente grande para dar énfasis al título */
-    font-weight: 700; /* Peso de fuente alto para hacer el texto más prominente */
-    color: var(--color_text-secundary); /* Color del título, definido en variables */
-    text-transform: uppercase; /* Título en mayúsculas para mayor impacto visual */
-    letter-spacing: 2px; /* Espaciado entre letras para estilizar el título */
-    margin-top: 10px; /* Pequeño espacio superior entre el título y el párrafo */
-}
-
-/* ===== Contenedor de las Tarjetas ===== */
-
-/* Contenedor de todas las tarjetas, con flexbox para organizar las columnas */
-.container__box-cardPrimary {
-    display: flex; /* Usamos flexbox para alinear las tarjetas en fila */
-    flex-wrap: wrap; /* Permitir que las tarjetas se adapten a múltiples filas en pantallas pequeñas */
-    justify-content: center; /* Centrar las tarjetas en el contenedor */
-    gap: 30px; /* Espacio entre cada tarjeta */
-    margin-top: 40px; /* Espacio entre el texto principal y las tarjetas */
-}
-
-/* ===== Estilos de las Tarjetas ===== */
-
-/* Estilos individuales de cada tarjeta */
-.box__card-primary {
-    max-width: 350px; /* Ancho máximo de cada tarjeta */
-    padding: 40px; /* Espaciado interno para el contenido de la tarjeta */
-    border: 1px solid #a9902e; /* Borde sólido en color dorado */
-    border-radius: 20px; /* Bordes redondeados para un diseño más suave */
-    margin: 14px; /* Espaciado externo para separar las tarjetas */
-    transition: all 300ms ease-in-out; /* Transición suave para efectos al pasar el mouse */
-    background-color: #fff; /* Fondo blanco de las tarjetas para contrastar con el fondo gris */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad a las tarjetas */
-}
-
-/* Efecto hover para las tarjetas */
-.box__card-primary:hover {
-    border: 1px solid transparent; /* Remover el borde dorado al hacer hover */
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al pasar el mouse */
-    transform: scale(1.05); /* Efecto de zoom al hacer hover para resaltar la tarjeta */
-}
-
-/* ===== Estilos de las Imágenes ===== */
-
-/* Estilos para las imágenes dentro de las tarjetas */
-.box__card-primary img {
-    width: 100px; /* Ancho fijo de las imágenes */
-    height: 100px; /* Alto fijo de las imágenes */
-    object-fit: cover; /* Asegurar que las imágenes se ajusten bien sin deformarse */
-    border-radius: 50%; /* Convertir las imágenes en círculos */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor de las imágenes */
-    transition: transform 0.3s ease; /* Transición suave para el efecto de rotación */
-}
-
-/* Efecto hover para las imágenes */
-.box__card-primary:hover img {
-    transform: rotate(10deg); /* Rotar ligeramente la imagen al hacer hover */
-}
-
-/* ===== Estilos del Título de las Tarjetas ===== */
-
-/* Estilos para los títulos dentro de cada tarjeta */
-.box__card-primary h2 {
-    font-size: 1.5rem; /* Tamaño de fuente para los títulos de las tarjetas */
-    margin-top: 20px; /* Espaciado entre la imagen y el título */
-    font-weight: 600; /* Peso de fuente más grueso para resaltar el título */
+    font-size: 2.8rem; /* Tamaño de fuente grande y destacado para el título */
+    font-weight: 700; /* Peso fuerte para resaltar el encabezado */
     color: #333; /* Color oscuro para el título */
+    margin-top: 15px; /* Margen superior suave para separar del subtítulo */
+    text-transform: uppercase; /* Título en mayúsculas */
+    letter-spacing: 2px; /* Un ligero espaciado para darle estilo */
+}
+
+/* ===== Contenedor Dinámico de las Tarjetas ===== */
+
+.container__box-cardPrimary {
+    display: flex; /* Flexbox para alinear las tarjetas en una fila */
+    flex-wrap: wrap; /* Permitir que las tarjetas bajen de línea en pantallas pequeñas */
+    justify-content: space-between; /* Distribuir las tarjetas uniformemente */
+    gap: 30px; /* Espacio entre las tarjetas */
+    margin-top: 40px; /* Margen superior entre la cabecera y las tarjetas */
+}
+
+/* ===== Estilos Individuales de las Tarjetas ===== */
+
+.box__card-primary {
+    flex: 1; /* Dejar que las tarjetas ocupen el espacio disponible */
+    min-width: 280px; /* Ancho mínimo para cada tarjeta */
+    max-width: 350px; /* Ancho máximo para cada tarjeta */
+    padding: 30px; /* Espaciado interno para que el contenido no esté pegado al borde */
+    background-color: #fff; /* Fondo blanco para destacar las tarjetas sobre el fondo gris */
+    border-radius: 15px; /* Bordes redondeados para suavizar el diseño */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizar el hover con transformaciones */
+    text-align: center; /* Centramos todo el contenido dentro de la tarjeta */
+}
+
+/* Efecto Hover en las Tarjetas */
+.box__card-primary:hover {
+    transform: translateY(-10px); /* Elevar ligeramente la tarjeta */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Aumentar la sombra al hacer hover */
+}
+
+/* ===== Estilos de Imágenes dentro de las Tarjetas ===== */
+
+.box__card-primary img {
+    width: 90px; /* Tamaño fijo para la imagen */
+    height: 90px; /* Alto fijo para mantener las proporciones */
+    object-fit: contain; /* Asegura que la imagen no se distorsione */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-bottom: 20px; /* Espacio debajo de la imagen para separarla del título */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); /* Pequeña sombra para hacer la imagen más atractiva */
+}
+
+/* Efecto Hover en Imágenes */
+.box__card-primary:hover img {
+    transform: rotate(8deg); /* Efecto de rotación suave al pasar el mouse */
+    transition: transform 0.3s ease; /* Animación suave para la rotación */
+}
+
+/* ===== Estilos del Título dentro de las Tarjetas ===== */
+
+.box__card-primary h2 {
+    font-size: 1.6rem; /* Tamaño de fuente moderado para el título */
+    font-weight: 600; /* Título destacado y en negrita */
+    color: #444; /* Color oscuro para hacer contraste */
+    margin: 10px 0; /* Margen superior e inferior suave para espaciado */
     text-transform: capitalize; /* Capitalizar solo la primera letra de cada palabra */
 }
 
-/* ===== Estilos del Texto de las Tarjetas ===== */
+/* ===== Estilos del Texto Descriptivo dentro de las Tarjetas ===== */
 
-/* Estilos para los párrafos dentro de cada tarjeta */
 .box__card-primary p {
-    margin-top: 15px; /* Espacio entre el título y el párrafo */
-    font-size: 1rem; /* Tamaño de fuente estándar para el cuerpo del texto */
+    font-size: 1rem; /* Tamaño de fuente estándar */
     color: #666; /* Color gris para el texto */
-    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
-    font-weight: 300; /* Peso de fuente ligero para el texto descriptivo */
+    line-height: 1.6; /* Altura de línea cómoda para mejorar la legibilidad */
+    font-weight: 300; /* Peso ligero para mantener un estilo limpio */
+    margin-top: 15px; /* Margen superior para separar el texto del título */
 }
 
-/* ===== Ajustes en Transiciones ===== */
+/* ===== Ajustes de Hover para Títulos y Texto ===== */
 
-/* Cambios de color en los títulos cuando el mouse está sobre la tarjeta */
+/* Cambiar color del título al pasar el mouse */
 .box__card-primary:hover h2 {
-    color: #a9902e; /* Cambiar el color del título a dorado al hacer hover */
+    color: #a9922e; /* Título dorado al hacer hover */
 }
 
-/* Cambios de color en los párrafos cuando el mouse está sobre la tarjeta */
+/* Cambiar color del texto descriptivo al pasar el mouse */
 .box__card-primary:hover p {
-    color: #333; /* Cambiar el color del texto a oscuro al hacer hover */
+    color: #333; /* Texto en color más oscuro al hacer hover */
 }
 
+/* ===== Estilos Responsivos ===== */
 
+/* Adaptar las tarjetas en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .container__box-cardPrimary {
+        flex-direction: column; /* Colocar las tarjetas una debajo de otra */
+        gap: 20px; /* Reducir el espacio entre las tarjetas */
+    }
 
-/*End Estilos Generales Cards*/
+    .box__card-primary {
+        max-width: 100%; /* Permitir que las tarjetas ocupen todo el ancho disponible */
+    }
+}
+
 
 /*Sobre Nosotros*/
 
@@ -508,7 +512,7 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     color: #333; /* Color del texto en todo el documento */
     text-align: center; /* Centra el texto y el contenido dentro del contenedor */
     padding: 50px; /* Espaciado interno para mayor respiración entre elementos */
-    background-color: #e0d4b0; /* Fondo cálido para el contenedor principal */
+    background-color: #a1a1929d; /* Fondo cálido para el contenedor principal */
     min-height: 50vh; /* Hace que el fondo tenga como mínimo la altura de la pantalla */
 }
 
@@ -549,13 +553,13 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     /* Hace que el botón se muestre como un bloque */
     display: block;
 
-    background-color: #174217;
+    background-color: #ce3d3dd7;
     
     /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
     padding: 10px 50px;
     
     /* Añade un borde sólido de 2px del color de texto primario */
-    border: 2px solid rgb(248, 248, 248);
+    border: 2px solid #ce3d3dd7;
     
     /* Aplica bordes redondeados de 8px al botón */
     border-radius: 8px;
@@ -576,7 +580,7 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     
 .btn__text-about:hover {
     color: #ffffff;
-    background: rgb(64, 64, 64);
+    background: rgb(205, 0, 0);
     
 }
 
@@ -644,7 +648,7 @@ body {
 
 /* Contenedor principal para el servicio */
 .container__service {
-    padding: 50px 20px; /* Espaciado interno */
+    padding: 50px 30px; /* Espaciado interno */
     text-align: center; /* Centra el texto */
 }
 
@@ -652,7 +656,7 @@ body {
 .service {
     background-color: #ffffff; /* Fondo blanco para el área de servicio */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
 }
 
 /* Estilo para el texto de servicio */
@@ -663,13 +667,13 @@ body {
 /* Estilo para el párrafo y título */
 .text__service p {
     font-size: 1.5em; /* Tamaño de fuente para el párrafo */
-    color: #4CAF50; /* Color verde */
+    color: #d51313; /* Color verde */
     margin: 0; /* Sin márgenes */
     padding: 25px;
 }
 
 .text__service h1 {
-    font-size: 2.5em; /* Tamaño de fuente grande */
+    font-size: 2.0em; /* Tamaño de fuente grande */
     color: #333; /* Color del texto */
     margin: 10px 0; /* Espaciado superior e inferior */
 }
@@ -701,9 +705,9 @@ body {
     left: 0; /* Alineado a la izquierda */
     right: 0; /* Alineado a la derecha */
     bottom: 0; /* Alineado al fondo */
-    background: rgba(76, 175, 80, 0.1); /* Fondo verde claro */
+    background: rgba(175, 173, 76, 0.1); /* Fondo rojo claro */
     z-index: 0; /* Coloca detrás del contenido */
-    transition: background 0.3s; /* Suaviza el cambio de fondo */
+    transition: 0.3s; /* Suaviza el cambio de fondo */
 }
 
 /* Estilo para la imagen de la tarjeta */
@@ -717,7 +721,7 @@ body {
 /* Estilo para el contenido dentro de cada tarjeta */
 .card__service h2 {
     font-size: 1.5em; /* Tamaño de fuente para el título */
-    color: #333; /* Color del texto */
+    color: #000000; /* Color del texto */
     margin: 10px 0; /* Espaciado superior e inferior */
     z-index: 1; /* Coloca encima del fondo */
 }
@@ -734,7 +738,7 @@ body {
 .card__service a {
     display: inline-block; /* Permite el uso de márgenes */
     padding: 10px 20px; /* Espaciado interno para el enlace */
-    background-color: #4CAF50; /* Color verde para el enlace */
+    background-color: #ff0505; /* Color verde para el enlace */
     color: white; /* Color del texto en el enlace */
     border-radius: 25px; /* Bordes redondeados */
     text-decoration: none; /* Sin subrayado */
@@ -744,7 +748,7 @@ body {
 
 /* Efecto hover para el enlace */
 .card__service a:hover {
-    background-color: #45a049; /* Cambia el color al pasar el ratón */
+    background-color: #a04545; /* Cambia el color al pasar el ratón */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
 }
 
@@ -756,7 +760,7 @@ body {
 
 /* Efecto hover para el fondo de la tarjeta */
 .card__service:hover::before {
-    background: rgba(76, 175, 80, 0.2); /* Aumenta el color de fondo al pasar el ratón */
+    background: rgba(175, 76, 76, 0.2); /* Aumenta el color de fondo al pasar el ratón */
 }
 
 /* Estilos responsivos para pantallas más pequeñas */
@@ -789,42 +793,264 @@ body {
 
 /*End Servicios*/
 
-/*Proyectos*/
-
-.container__proyect{
-    padding: 100px 0px;
-    background: var(--background-color);
-    margin-top: 100px;
+/* Sección Proyectos: Contenedor general */
+.container__proyect {
+    padding: 40px 0; /* Espaciado superior e inferior del contenedor */
+    background: var(--background-color); /* Color de fondo dinámico según la variable */
+    margin-top: 0px; /* Separación superior para alineación */
+    text-align: center; /* Alinea el texto dentro de esta sección al centro */
 }
 
+/* Estilo del subtítulo "NUESTROS PROYECTOS" con 1em */
+.text__service p {
+    font-size: 1.2em; /* Tamaño de fuente reducido a 1em */
+    color: #666; /* Color gris para no competir visualmente con el título */
+    margin-bottom: 10px; /* Espaciado inferior para separar del contenido */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas para resaltarlo */
+}
+
+/* Estilo del título principal */
+.text__service h1 {
+    font-size: 2.0rem; /* Tamaño grande para destacar el título */
+    color: #333; /* Color oscuro para contraste */
+    margin-bottom: 10px; /* Espaciado inferior entre el título y el párrafo */
+}
+
+/* Contenedor de las tarjetas (tarjetas de proyectos) */
 .container__card-proyect {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: flex; /* Usa flexbox para organizar las tarjetas en fila */
+    justify-content: space-around; /* Distribuye el espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
+    gap: 30px; /* Espacio entre las tarjetas */
 }
 
+/* Estilos de las tarjetas individuales */
 .card__proyect {
-    width: 300px;
-    height: 300px;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    color: #255180;
-    text-align: left;
-    background-size: cover;
-    background-position: center;
+    position: relative; /* Permite colocar el overlay encima de la tarjeta */
+    width: 320px; /* Anchura fija de la tarjeta */
+    height: 320px; /* Altura fija de la tarjeta */
+    border-radius: 15px; /* Bordes redondeados para un aspecto moderno */
+    color: #fff; /* Color blanco para el texto por defecto */
+    text-align: center; /* Alineación centrada del texto dentro de la tarjeta */
+    background-size: cover; /* La imagen de fondo se ajusta para cubrir toda la tarjeta */
+    background-position: center; /* Centra la imagen de fondo */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de elevación */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Suaviza la animación de hover */
+    overflow: hidden; /* Oculta el contenido que sobresalga de la tarjeta */
 }
 
-.card__proyect h2, .card__proyect p {
-    margin: 0;
+/* Efecto hover para agrandar ligeramente la tarjeta y cambiar colores */
+.card__proyect:hover {
+    transform: scale(1.05); /* Aumenta el tamaño en un 5% al pasar el ratón */
 }
+
+/* Capa de superposición (overlay) encima de la tarjeta para oscurecer el fondo */
+.card__proyect .overlay {
+    position: absolute; /* Posiciona la capa en relación a la tarjeta */
+    top: 0; /* Alinea la capa al borde superior */
+    left: 0; /* Alinea la capa al borde izquierdo */
+    width: 100%; /* La capa cubre el ancho total de la tarjeta */
+    height: 100%; /* La capa cubre la altura total de la tarjeta */
+    background: rgba(0, 0, 0, 0.589); /* Fondo semitransparente negro */
+    border-radius: 15px; /* Bordes redondeados para coincidir con la tarjeta */
+}
+
+/* Contenido de texto dentro de la tarjeta */
+.card__content {
+    position: relative; /* Posiciona el contenido por encima del overlay */
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+    padding: 20px; /* Espaciado interno para el contenido */
+}
+
+/* Estilo del título dentro de la tarjeta */
+.card__content h2 {
+    margin: 0; /* Sin margen superior o inferior */
+    font-size: 1.8rem; /* Tamaño grande para destacar el título */
+    color: #fff; /* Color blanco por defecto */
+    transition: color 0.3s ease-in-out; /* Animación suave del cambio de color */
+}
+
+/* Estilo del párrafo dentro de la tarjeta */
+.card__content p {
+    margin: 10px 0 0; /* Espaciado superior entre el título y el párrafo */
+    font-size: 1.1rem; /* Tamaño de texto mediano */
+    color: #f0f0f0; /* Color gris claro por defecto */
+    transition: color 0.3s ease-in-out; /* Animación suave del cambio de color */
+}
+
+/* Cambio de colores al hacer hover en la tarjeta */
+.card__proyect:hover h2 {
+    color: #FFD700; /* Cambia el título a un amarillo fuerte (dorado) */
+}
+
+.card__proyect:hover p {
+    color: #ffffff; /* Cambia el párrafo a blanco */
+}
+
+/* Estilo responsivo: Ajustes para pantallas más pequeñas (como móviles) */
+@media screen and (max-width: 768px) {
+    .container__card-proyect {
+        flex-direction: column; /* Cambia la disposición a columna (una debajo de la otra) */
+        align-items: center; /* Alinea las tarjetas al centro en pantallas pequeñas */
+    }
+
+    .card__proyect {
+        width: 90%; /* Hace las tarjetas más anchas para pantallas pequeñas */
+        height: 300px; /* Ajusta la altura para mejor proporción en pantallas pequeñas */
+    }
+}
+
+/* Sección Proyectos: Contenedor general: FIN */
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Aumentamos el ancho máximo */
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ce0c0c 30%, #1340e2 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sección del formulario */
+.form-section {
+    width: 60%; /* Aumentamos el ancho del formulario */
+}
+
+.form-section label {
+    display: flex;
+    margin: 15px 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-section input[type="text"] {
+    width: 100%;
+    padding: 15px 12px; /* Ajustamos el padding para que sea más amplio */
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px; /* Aumentamos el tamaño de fuente */
+    background: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section input[type="text"]:focus {
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.form-section .button {
+    display: inline-block;
+    padding: 15px 30px; /* Aumentamos el tamaño del botón */
+    margin-top: 20px;
+    background-color: #fff;
+    color: #af2b2b;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section .button:hover {
+    background-color: #e6e6e6;
+    color: #1340e2;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Sección de la imagen */
+.image-section {
+    width: 35%; /* Ajustamos el ancho de la imagen */
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Contenedor principal de medios */
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #a1a1a1, #a4ab8d);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 900px;
+}
+/* Contenedor general que puede incluir otros elementos multimedia */
+.media-container {
+    width: 100%; /* El contenedor de medios ocupa el 100% del ancho de la página */
+    margin: 0 auto; /* Centrar el contenedor */
+    background-color: #f8f8f8; /* Color de fondo claro para hacer que el video destaque */
+    padding: 20px 0; /* Espacio alrededor del contenido */
+}
+
+/* Sección de video (centrar el contenido) */
+.video-section {
+    text-align: center; /* Centra todos los elementos dentro de la sección */
+    padding: 10px;
+}
+
+/* Título del reproductor */
+.video-section h2 {
+    font-size: 28px;
+    color: #eeeeee; /* Color rojo fuerte, creativo para resaltar el título */
+    background: linear-gradient(90deg, #9f3a3a 0%, #906e4a 100%); /* Gradiente con colores rojos */
+    padding: 10px;
+    margin-bottom: 20px;
+    display: inline-block; /* Solo ocupa el espacio necesario para el texto */
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutiles para dar profundidad */
+}
+
+/* Contenedor del video */
+.video-container {
+    position: center;
+    width: 1000%; /* El contenedor del video ahora ocupa todo el ancho de su contenedor padre */
+    max-width: 110%; /* Asegurarse de que no se desborde en pantallas pequeñas */
+    background-color: #000000; /* Fondo negro detrás del video */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+/* Video */
+video {
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    border: none; /* Elimina cualquier borde predeterminado */
+    border-radius: 5px; /* Los bordes del video coinciden con el del contenedor */
+}
+
 
 
 /* Estilos generales para el pie de página */
 footer {
-    background: linear-gradient(135deg, #3a6186, #174217); /* Fondo degradado */
+    background: linear-gradient(135deg, #ff0707, #9fa99f); /* Fondo degradado */
     color: white; /* Color del texto */
-    padding: 40px 0; /* Espaciado interno */
+    padding: 100% 0; /* Espaciado interno */
     position: relative; /* Posicionamiento relativo */
     overflow: hidden; /* Oculta contenido desbordante */
 }
@@ -863,8 +1089,8 @@ footer {
 
 /* Efecto de hover para los bloques de contenido */
 .footer-content:hover {
-    transform: translateY(-10px); /* Desplazamiento hacia arriba */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra de elevación */
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); /* Sombra de elevación */
 }
 
 /* Estilos para el título final del pie de página */
@@ -903,4 +1129,24 @@ footer i {
     .footer-content {
         margin-bottom: 20px; /* Espaciado inferior entre bloques */
     }
+}
+
+/* Estilos para el encabezado del footer "Desarrollado por..." */
+footer h2.elementor-heading-title {
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrar el texto */
+    color: #ffffff; /* Color del texto */
+    background-color: #3d3838; /* Fondo oscuro */
+    padding: 10px 0; /* Espaciado vertical */
+    margin: 0; /* Sin margen */
+    border-top: 0 solid #1d1c20; /* Línea superior decorativa */
+    border-bottom: 2px solid #181613; /* Línea inferior decorativa */
+    font-family: 'Arial', sans-serif; /* Fuente */
+}
+
+/* Eliminar posible duplicado de estilo en el footer */
+footer {
+    padding: 0; /* Espaciado interior del footer */
+    background-color: #cb5c5c; /* Color de fondo */
 }
