@@ -18,7 +18,8 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif; /* Tipografía global de la página */
+    font-family: 'Poppins', sans-serif;
+    /* Tipografía global de la página */
 }
 
 /*
@@ -29,9 +30,12 @@
 header {
     position: fixed;
     width: 100%;
-    background-color: #fff; /* Fondo blanco */
-    z-index: 1000; /* Para asegurar que siempre esté visible sobre el contenido */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff;
+    /* Fondo blanco */
+    z-index: 1000;
+    /* Para asegurar que siempre esté visible sobre el contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
 /*
@@ -43,7 +47,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 45px; /* Espaciado interno para dar aire entre los elementos */
+    padding: 15px 45px;
+    /* Espaciado interno para dar aire entre los elementos */
 }
 
 /*
@@ -51,8 +56,10 @@ header {
     Establece el tamaño del logo y agrega margen para separarlo visualmente del menú de navegación.
 */
 .logo img {
-    height: 60px; /* Altura del logo */
-    margin-right: 30px; /* Espaciado entre el logo y el menú */
+    height: 60px;
+    /* Altura del logo */
+    margin-right: 30px;
+    /* Espaciado entre el logo y el menú */
 }
 
 /*
@@ -61,7 +68,8 @@ header {
 */
 .menu {
     display: flex;
-    align-items: center; /* Alineación vertical centrada de los elementos del menú */
+    align-items: center;
+    /* Alineación vertical centrada de los elementos del menú */
 }
 
 /*
@@ -70,7 +78,8 @@ header {
 */
 .menu ul {
     display: flex;
-    list-style: none; /* Sin viñetas para la lista */
+    list-style: none;
+    /* Sin viñetas para la lista */
 }
 
 /*
@@ -80,7 +89,8 @@ header {
 */
 .menu ul li {
     margin: 0 20px;
-    position: relative; /* Necesario para posicionar el dropdown */
+    position: relative;
+    /* Necesario para posicionar el dropdown */
 }
 
 /*
@@ -89,9 +99,12 @@ header {
     Se incluye una transición suave para los efectos hover.
 */
 .menu ul li a {
-    color: #000; /* Color de texto negro */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: color 0.3s, transform 0.3s; /* Animaciones suaves para color y desplazamiento */
+    color: #000;
+    /* Color de texto negro */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    transition: color 0.3s, transform 0.3s;
+    /* Animaciones suaves para color y desplazamiento */
 }
 
 /*
@@ -99,8 +112,10 @@ header {
     Cambia el color del enlace a amarillo y lo desplaza ligeramente hacia arriba cuando el mouse pasa sobre él.
 */
 .menu ul li a:hover {
-    color: #ffee00; /* Cambia a amarillo en hover */
-    transform: translateY(-3px); /* Desplaza ligeramente hacia arriba en hover */
+    color: #ffee00;
+    /* Cambia a amarillo en hover */
+    transform: translateY(-3px);
+    /* Desplaza ligeramente hacia arriba en hover */
 }
 
 /*
@@ -110,12 +125,18 @@ header {
 */
 .btn_quote {
     background-color: #fff;
-    color: #d90000; /* Texto rojo */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border-radius: 30px; /* Bordes redondeados */
-    border: 2px solid #d90000; /* Borde rojo */
-    transition: background-color 0.3s, transform 0.3s; /* Animación para hover */
-    margin-left: 30px; /* Separación con el menú */
+    color: #d90000;
+    /* Texto rojo */
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    border-radius: 30px;
+    /* Bordes redondeados */
+    border: 2px solid #d90000;
+    /* Borde rojo */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Animación para hover */
+    margin-left: 30px;
+    /* Separación con el menú */
 }
 
 /*
@@ -123,9 +144,12 @@ header {
     Cambia el fondo a rojo y el texto a blanco cuando se pasa el cursor sobre el botón.
 */
 .btn_quote:hover {
-    background-color: #d90000; /* Fondo rojo en hover */
-    color: #fff; /* Texto blanco en hover */
-    transform: translateY(-3px); /* Desplaza ligeramente hacia arriba en hover */
+    background-color: #d90000;
+    /* Fondo rojo en hover */
+    color: #fff;
+    /* Texto blanco en hover */
+    transform: translateY(-3px);
+    /* Desplaza ligeramente hacia arriba en hover */
 }
 
 /*
@@ -134,35 +158,54 @@ header {
     sobre el elemento "Sobre nosotros" en el menú principal.
 */
 .accordion .content {
-    list-style: none; /* Eliminar viñetas de lista */
-    padding: 0; /* Sin padding */
-    margin: 0; /* Sin margen */
-    position: absolute; /* Submenú flotante sobre el ítem del menú */
-    left: 0; /* Alinear el submenú con el ítem padre */
-    top: 100%; /* Colocar el submenú debajo del ítem del menú */
-    display: none; /* Ocultar el submenú por defecto */
-    background-color: rgba(68, 68, 68, 0.9); /* Fondo oscuro con transparencia */
-    transition: all 0.3s ease-in-out; /* Transición suave para la aparición del submenú */
-    border-radius: 8px; /* Bordes redondeados para un aspecto más suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
-    padding: 10px 0; /* Padding vertical para los ítems */
+    list-style: none;
+    /* Eliminar viñetas de lista */
+    padding: 0;
+    /* Sin padding */
+    margin: 0;
+    /* Sin margen */
+    position: absolute;
+    /* Submenú flotante sobre el ítem del menú */
+    left: 0;
+    /* Alinear el submenú con el ítem padre */
+    top: 100%;
+    /* Colocar el submenú debajo del ítem del menú */
+    display: none;
+    /* Ocultar el submenú por defecto */
+    background-color: rgba(68, 68, 68, 0.9);
+    /* Fondo oscuro con transparencia */
+    transition: all 0.3s ease-in-out;
+    /* Transición suave para la aparición del submenú */
+    border-radius: 8px;
+    /* Bordes redondeados para un aspecto más suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra para profundidad */
+    padding: 10px 0;
+    /* Padding vertical para los ítems */
 }
 
 /* ===== Mostrar Contenido al Pasar el Mouse ===== */
 .accordion:hover .content {
-    display: block; /* Mostrar contenido al pasar el mouse */
-    animation: slideDown 0.3s ease-in-out forwards; /* Aplicar animación de deslizamiento */
+    display: block;
+    /* Mostrar contenido al pasar el mouse */
+    animation: slideDown 0.3s ease-in-out forwards;
+    /* Aplicar animación de deslizamiento */
 }
 
 /* ===== Animación de Deslizamiento Vertical ===== */
 @keyframes slideDown {
     from {
-        opacity: 0; /* Inicia invisible */
-        transform: translateY(-20px); /* Inicia más arriba */
+        opacity: 0;
+        /* Inicia invisible */
+        transform: translateY(-20px);
+        /* Inicia más arriba */
     }
+
     to {
-        opacity: 1; /* Totalmente visible */
-        transform: translateY(0); /* En su posición final */
+        opacity: 1;
+        /* Totalmente visible */
+        transform: translateY(0);
+        /* En su posición final */
     }
 }
 
@@ -171,13 +214,16 @@ header {
     Margen inferior entre cada elemento para separarlos visualmente.
 */
 .accordion .content ul {
-    margin: 0; /* Sin margen */
-    padding: 0; /* Sin padding */
+    margin: 0;
+    /* Sin margen */
+    padding: 0;
+    /* Sin padding */
 }
 
 .accordion .content ul li {
-    margin-bottom: 10px; /* Espaciado entre elementos */
-    
+    margin-bottom: 10px;
+    /* Espaciado entre elementos */
+
 }
 
 /*
@@ -186,12 +232,17 @@ header {
     con un padding adicional para facilitar la interacción.
 */
 .accordion .content ul li a {
-    color: #fff; /* Color blanco del texto */
-    padding: 12px 20px; /* Espacio interno ajustado */
-    display: block; /* Enlace ocupa todo el ancho disponible */
-    border-radius: 4px; /* Bordes redondeados para los enlaces */
-    transition: background-color 0.3s, transform 0.2s; /* Transición suave para hover */
-    
+    color: #fff;
+    /* Color blanco del texto */
+    padding: 12px 20px;
+    /* Espacio interno ajustado */
+    display: block;
+    /* Enlace ocupa todo el ancho disponible */
+    border-radius: 4px;
+    /* Bordes redondeados para los enlaces */
+    transition: background-color 0.3s, transform 0.2s;
+    /* Transición suave para hover */
+
 }
 
 /*
@@ -199,8 +250,10 @@ header {
     Cambia el fondo a un color más brillante cuando se pasa el cursor sobre los enlaces del submenú.
 */
 .accordion .content ul li a:hover {
-    background-color: #ffee00; /* Fondo amarillo en hover */
-    transform: scale(1.05); /* Escala ligeramente el enlace para un efecto de "pop" */
+    background-color: #ffee00;
+    /* Fondo amarillo en hover */
+    transform: scale(1.05);
+    /* Escala ligeramente el enlace para un efecto de "pop" */
 }
 
 
@@ -210,7 +263,8 @@ header {
 */
 .socialMedia {
     display: flex;
-    align-items: center; /* Alineación vertical centrada de los íconos */
+    align-items: center;
+    /* Alineación vertical centrada de los íconos */
 }
 
 /*
@@ -219,9 +273,12 @@ header {
     Añade una transición suave para agrandarlos al pasar el cursor.
 */
 .socialMedia img {
-    height: 30px; /* Tamaño del ícono */
-    margin-left: 15px; /* Separación entre íconos */
-    transition: transform 0.3s; /* Animación suave para hover */
+    height: 30px;
+    /* Tamaño del ícono */
+    margin-left: 15px;
+    /* Separación entre íconos */
+    transition: transform 0.3s;
+    /* Animación suave para hover */
 }
 
 /*
@@ -229,7 +286,8 @@ header {
 Agranda el ícono ligeramente al pasar el cursor sobre él.
 */
 .socialMedia img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño del ícono en hover */
+    transform: scale(1.1);
+    /* Aumenta el tamaño del ícono en hover */
 }
 
 
@@ -247,7 +305,7 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    
+
 
 }
 
@@ -373,119 +431,175 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
 
 /* Contenedor principal de la sección */
 .container__card-primary {
-    padding: 80px 0; /* Espaciado superior e inferior para separar del contenido circundante */
-    background-color: #f5f5f5; /* Fondo gris claro para contrastar con las tarjetas */
-    font-family: 'Poppins', sans-serif; /* Fuente limpia y profesional */
+    padding: 80px 0;
+    /* Espaciado superior e inferior para separar del contenido circundante */
+    background-color: #f5f5f5;
+    /* Fondo gris claro para contrastar con las tarjetas */
+    font-family: 'Poppins', sans-serif;
+    /* Fuente limpia y profesional */
 }
 
 /* Contenedor de todo el contenido de la sección */
 .card__primary {
-    max-width: 1200px; /* Limitar el ancho del contenedor para un diseño centrado en pantallas grandes */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    text-align: center; /* Centramos todo el texto */
-    padding: 0 20px; /* Pequeño espaciado interno para evitar que el contenido toque los bordes */
+    max-width: 1200px;
+    /* Limitar el ancho del contenedor para un diseño centrado en pantallas grandes */
+    margin: 0 auto;
+    /* Centrar el contenedor horizontalmente */
+    text-align: center;
+    /* Centramos todo el texto */
+    padding: 0 20px;
+    /* Pequeño espaciado interno para evitar que el contenido toque los bordes */
 }
 
 /* Estilos de la cabecera de la sección */
 .text__card-primary {
-    max-width: 800px; /* Limitar el ancho del texto para mejorar la legibilidad */
-    margin: 0 auto 40px; /* Centrar el texto y añadir margen inferior para separar del contenido principal */
+    max-width: 800px;
+    /* Limitar el ancho del texto para mejorar la legibilidad */
+    margin: 0 auto 40px;
+    /* Centrar el texto y añadir margen inferior para separar del contenido principal */
 }
 
 .text__card-primary p {
-    color: #555; /* Color gris oscuro para el subtítulo */
-    font-size: 1em; /* Tamaño de fuente ajustado para el subtítulo */
-    letter-spacing: 3px; /* Espaciado entre letras para elegancia */
-    font-weight: 600; /* Un poco más grueso para visibilidad */
-    text-transform: uppercase; /* Convierte todo a mayúsculas */
+    color: #555;
+    /* Color gris oscuro para el subtítulo */
+    font-size: 1em;
+    /* Tamaño de fuente ajustado para el subtítulo */
+    letter-spacing: 3px;
+    /* Espaciado entre letras para elegancia */
+    font-weight: 600;
+    /* Un poco más grueso para visibilidad */
+    text-transform: uppercase;
+    /* Convierte todo a mayúsculas */
 }
 
 .text__card-primary h1 {
-    font-size: 2.8rem; /* Tamaño de fuente grande y destacado para el título */
-    font-weight: 700; /* Peso fuerte para resaltar el encabezado */
-    color: #333; /* Color oscuro para el título */
-    margin-top: 15px; /* Margen superior suave para separar del subtítulo */
-    text-transform: uppercase; /* Título en mayúsculas */
-    letter-spacing: 2px; /* Un ligero espaciado para darle estilo */
+    font-size: 2.8rem;
+    /* Tamaño de fuente grande y destacado para el título */
+    font-weight: 700;
+    /* Peso fuerte para resaltar el encabezado */
+    color: #333;
+    /* Color oscuro para el título */
+    margin-top: 15px;
+    /* Margen superior suave para separar del subtítulo */
+    text-transform: uppercase;
+    /* Título en mayúsculas */
+    letter-spacing: 2px;
+    /* Un ligero espaciado para darle estilo */
 }
 
 /* ===== Contenedor Dinámico de las Tarjetas ===== */
 
 .container__box-cardPrimary {
-    display: flex; /* Flexbox para alinear las tarjetas en una fila */
-    flex-wrap: wrap; /* Permitir que las tarjetas bajen de línea en pantallas pequeñas */
-    justify-content: space-between; /* Distribuir las tarjetas uniformemente */
-    gap: 30px; /* Espacio entre las tarjetas */
-    margin-top: 40px; /* Margen superior entre la cabecera y las tarjetas */
+    display: flex;
+    /* Flexbox para alinear las tarjetas en una fila */
+    flex-wrap: wrap;
+    /* Permitir que las tarjetas bajen de línea en pantallas pequeñas */
+    justify-content: space-between;
+    /* Distribuir las tarjetas uniformemente */
+    gap: 30px;
+    /* Espacio entre las tarjetas */
+    margin-top: 40px;
+    /* Margen superior entre la cabecera y las tarjetas */
 }
 
 /* ===== Estilos Individuales de las Tarjetas ===== */
 
 .box__card-primary {
-    flex: 1; /* Dejar que las tarjetas ocupen el espacio disponible */
-    min-width: 280px; /* Ancho mínimo para cada tarjeta */
-    max-width: 350px; /* Ancho máximo para cada tarjeta */
-    padding: 30px; /* Espaciado interno para que el contenido no esté pegado al borde */
-    background-color: #fff; /* Fondo blanco para destacar las tarjetas sobre el fondo gris */
-    border-radius: 15px; /* Bordes redondeados para suavizar el diseño */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizar el hover con transformaciones */
-    text-align: center; /* Centramos todo el contenido dentro de la tarjeta */
+    flex: 1;
+    /* Dejar que las tarjetas ocupen el espacio disponible */
+    min-width: 280px;
+    /* Ancho mínimo para cada tarjeta */
+    max-width: 350px;
+    /* Ancho máximo para cada tarjeta */
+    padding: 30px;
+    /* Espaciado interno para que el contenido no esté pegado al borde */
+    background-color: #fff;
+    /* Fondo blanco para destacar las tarjetas sobre el fondo gris */
+    border-radius: 15px;
+    /* Bordes redondeados para suavizar el diseño */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Suavizar el hover con transformaciones */
+    text-align: center;
+    /* Centramos todo el contenido dentro de la tarjeta */
 }
 
 /* Efecto Hover en las Tarjetas */
 .box__card-primary:hover {
-    transform: translateY(-10px); /* Elevar ligeramente la tarjeta */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Aumentar la sombra al hacer hover */
+    transform: translateY(-10px);
+    /* Elevar ligeramente la tarjeta */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    /* Aumentar la sombra al hacer hover */
 }
 
 /* ===== Estilos de Imágenes dentro de las Tarjetas ===== */
 
 .box__card-primary img {
-    width: 90px; /* Tamaño fijo para la imagen */
-    height: 90px; /* Alto fijo para mantener las proporciones */
-    object-fit: contain; /* Asegura que la imagen no se distorsione */
-    border-radius: 50%; /* Hacer la imagen circular */
-    margin-bottom: 20px; /* Espacio debajo de la imagen para separarla del título */
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); /* Pequeña sombra para hacer la imagen más atractiva */
+    width: 90px;
+    /* Tamaño fijo para la imagen */
+    height: 90px;
+    /* Alto fijo para mantener las proporciones */
+    object-fit: contain;
+    /* Asegura que la imagen no se distorsione */
+    border-radius: 50%;
+    /* Hacer la imagen circular */
+    margin-bottom: 20px;
+    /* Espacio debajo de la imagen para separarla del título */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    /* Pequeña sombra para hacer la imagen más atractiva */
 }
 
 /* Efecto Hover en Imágenes */
 .box__card-primary:hover img {
-    transform: rotate(8deg); /* Efecto de rotación suave al pasar el mouse */
-    transition: transform 0.3s ease; /* Animación suave para la rotación */
+    transform: rotate(8deg);
+    /* Efecto de rotación suave al pasar el mouse */
+    transition: transform 0.3s ease;
+    /* Animación suave para la rotación */
 }
 
 /* ===== Estilos del Título dentro de las Tarjetas ===== */
 
 .box__card-primary h2 {
-    font-size: 1.6rem; /* Tamaño de fuente moderado para el título */
-    font-weight: 600; /* Título destacado y en negrita */
-    color: #444; /* Color oscuro para hacer contraste */
-    margin: 10px 0; /* Margen superior e inferior suave para espaciado */
-    text-transform: capitalize; /* Capitalizar solo la primera letra de cada palabra */
+    font-size: 1.6rem;
+    /* Tamaño de fuente moderado para el título */
+    font-weight: 600;
+    /* Título destacado y en negrita */
+    color: #444;
+    /* Color oscuro para hacer contraste */
+    margin: 10px 0;
+    /* Margen superior e inferior suave para espaciado */
+    text-transform: capitalize;
+    /* Capitalizar solo la primera letra de cada palabra */
 }
 
 /* ===== Estilos del Texto Descriptivo dentro de las Tarjetas ===== */
 
 .box__card-primary p {
-    font-size: 1rem; /* Tamaño de fuente estándar */
-    color: #666; /* Color gris para el texto */
-    line-height: 1.6; /* Altura de línea cómoda para mejorar la legibilidad */
-    font-weight: 300; /* Peso ligero para mantener un estilo limpio */
-    margin-top: 15px; /* Margen superior para separar el texto del título */
+    font-size: 1rem;
+    /* Tamaño de fuente estándar */
+    color: #666;
+    /* Color gris para el texto */
+    line-height: 1.6;
+    /* Altura de línea cómoda para mejorar la legibilidad */
+    font-weight: 300;
+    /* Peso ligero para mantener un estilo limpio */
+    margin-top: 15px;
+    /* Margen superior para separar el texto del título */
 }
 
 /* ===== Ajustes de Hover para Títulos y Texto ===== */
 
 /* Cambiar color del título al pasar el mouse */
 .box__card-primary:hover h2 {
-    color: #a9922e; /* Título dorado al hacer hover */
+    color: #a9922e;
+    /* Título dorado al hacer hover */
 }
 
 /* Cambiar color del texto descriptivo al pasar el mouse */
 .box__card-primary:hover p {
-    color: #333; /* Texto en color más oscuro al hacer hover */
+    color: #333;
+    /* Texto en color más oscuro al hacer hover */
 }
 
 /* ===== Estilos Responsivos ===== */
@@ -493,30 +607,41 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
 /* Adaptar las tarjetas en pantallas más pequeñas */
 @media screen and (max-width: 768px) {
     .container__box-cardPrimary {
-        flex-direction: column; /* Colocar las tarjetas una debajo de otra */
-        gap: 20px; /* Reducir el espacio entre las tarjetas */
+        flex-direction: column;
+        /* Colocar las tarjetas una debajo de otra */
+        gap: 20px;
+        /* Reducir el espacio entre las tarjetas */
     }
 
     .box__card-primary {
-        max-width: 100%; /* Permitir que las tarjetas ocupen todo el ancho disponible */
+        max-width: 100%;
+        /* Permitir que las tarjetas ocupen todo el ancho disponible */
     }
 }
 
 
 /*Sobre Nosotros*/
 
-.container__about{
-    font-family: 'Arial', sans-serif; /* Fuente general de la página */
-    margin: 0; /* Elimina márgenes predeterminados */
-    padding: 0; /* Elimina relleno predeterminado */
-    color: #333; /* Color del texto en todo el documento */
-    text-align: center; /* Centra el texto y el contenido dentro del contenedor */
-    padding: 50px; /* Espaciado interno para mayor respiración entre elementos */
-    background-color: #a1a1929d; /* Fondo cálido para el contenedor principal */
-    min-height: 50vh; /* Hace que el fondo tenga como mínimo la altura de la pantalla */
+.container__about {
+    font-family: 'Arial', sans-serif;
+    /* Fuente general de la página */
+    margin: 0;
+    /* Elimina márgenes predeterminados */
+    padding: 0;
+    /* Elimina relleno predeterminado */
+    color: #333;
+    /* Color del texto en todo el documento */
+    text-align: center;
+    /* Centra el texto y el contenido dentro del contenedor */
+    padding: 50px;
+    /* Espaciado interno para mayor respiración entre elementos */
+    background-color: #a1a1929d;
+    /* Fondo cálido para el contenedor principal */
+    min-height: 50vh;
+    /* Hace que el fondo tenga como mínimo la altura de la pantalla */
 }
 
-.about{
+.about {
     max-width: 1200px;
     margin: auto;
     padding: 0px 20px;
@@ -525,21 +650,22 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     justify-content: center;
 }
 
-.text__about{
+.text__about {
     width: 100%;
     padding-right: 40px;
 
 }
 
-.text__about h1{
+.text__about h1 {
     font-size: 2.5em;
     font-weight: bold;
-    color: #2c2c2c; /* Gris oscuro */
+    color: #2c2c2c;
+    /* Gris oscuro */
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.text__about p{
+.text__about p {
     font-size: 1.2em;
     color: #333;
     margin-bottom: 40px;
@@ -554,57 +680,58 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     display: block;
 
     background-color: #ce3d3dd7;
-    
+
     /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
     padding: 10px 50px;
-    
+
     /* Añade un borde sólido de 2px del color de texto primario */
     border: 2px solid #ce3d3dd7;
-    
+
     /* Aplica bordes redondeados de 8px al botón */
     border-radius: 8px;
-    
+
     /* Hace el texto más grueso */
     font-weight: 500;
-    
+
     /* Aplica el color de texto terciario al texto del botón */
     color: rgb(255, 255, 255);
-    
+
     /* Añade un margen lateral de 20px */
     margin: 30px 20px;
-    
+
     /* Aplica una transición suave de 300ms a todas las propiedades */
     transition: all 300ms;
-    
+
 }
-    
+
 .btn__text-about:hover {
     color: #ffffff;
     background: rgb(205, 0, 0);
-    
+
 }
 
 
-.image__about{
+.image__about {
     width: 100%;
     display: flex;
 }
 
-.image__about img{
+.image__about img {
     width: 300px;
     width: 200px;
     height: 200px;
     border-radius: 50px;
-    object-fit: cover; /* Para ajustar la imagen sin deformarla */
+    object-fit: cover;
+    /* Para ajustar la imagen sin deformarla */
     padding-left: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
-    
+
 
 }
 
-.image__about img{
+.image__about img {
     width: 300px;
     height: auto;
     border-radius: 50px;
@@ -613,26 +740,29 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
     gap: 20px;
 }
 
-.image__about img{
-    border-radius: 50% 20% / 30% 70%; /* Forma sorprendente y única */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para hacerlas destacar */
+.image__about img {
+    border-radius: 50% 20% / 30% 70%;
+    /* Forma sorprendente y única */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra para hacerlas destacar */
 }
 
 .image__about img:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón sobre las imágenes */
+    transform: scale(1.1);
+    /* Efecto de agrandamiento al pasar el ratón sobre las imágenes */
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-}
-    .iimage__about img {
-        flex-direction: column;
-    }
+@media (max-width: 768px) {}
 
-    .btn__text-about {
-        width: 50%;
-        margin-top: 20px;
-    }
+.iimage__about img {
+    flex-direction: column;
+}
+
+.btn__text-about {
+    width: 50%;
+    margin-top: 20px;
+}
 
 /*End Sobre Nosotros*/
 
@@ -640,153 +770,220 @@ Agranda el ícono ligeramente al pasar el cursor sobre él.
 
 /* Estilos generales para el cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif; /* Fuente general de la página */
-    margin: 0; /* Elimina márgenes predeterminados */
-    padding: 0; /* Elimina relleno predeterminado */
-    background-color: #f2f2f2; /* Fondo suave para todo el cuerpo */
+    font-family: 'Arial', sans-serif;
+    /* Fuente general de la página */
+    margin: 0;
+    /* Elimina márgenes predeterminados */
+    padding: 0;
+    /* Elimina relleno predeterminado */
+    background-color: #f2f2f2;
+    /* Fondo suave para todo el cuerpo */
 }
 
 /* Contenedor principal para el servicio */
 .container__service {
-    padding: 50px 30px; /* Espaciado interno */
-    text-align: center; /* Centra el texto */
+    padding: 50px 30px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centra el texto */
 }
 
 /* Estilo para la sección de servicio */
 .service {
-    background-color: #ffffff; /* Fondo blanco para el área de servicio */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    background-color: #ffffff;
+    /* Fondo blanco para el área de servicio */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para profundidad */
 }
 
 /* Estilo para el texto de servicio */
 .text__service {
-    margin-bottom: 40px; /* Espaciado inferior */
+    margin-bottom: 40px;
+    /* Espaciado inferior */
 }
 
 /* Estilo para el párrafo y título */
 .text__service p {
-    font-size: 1.5em; /* Tamaño de fuente para el párrafo */
-    color: #d51313; /* Color verde */
-    margin: 0; /* Sin márgenes */
+    font-size: 1.5em;
+    /* Tamaño de fuente para el párrafo */
+    color: #d51313;
+    /* Color verde */
+    margin: 0;
+    /* Sin márgenes */
     padding: 25px;
 }
 
 .text__service h1 {
-    font-size: 2.0em; /* Tamaño de fuente grande */
-    color: #333; /* Color del texto */
-    margin: 10px 0; /* Espaciado superior e inferior */
+    font-size: 2.0em;
+    /* Tamaño de fuente grande */
+    color: #333;
+    /* Color del texto */
+    margin: 10px 0;
+    /* Espaciado superior e inferior */
 }
 
 /* Contenedor para las tarjetas de servicio */
 .container__card-service {
-    display: flex; /* Usa Flexbox para las tarjetas */
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples líneas */
-    justify-content: center; /* Centra las tarjetas */
-    gap: 20px; /* Espaciado entre las tarjetas */
+    display: flex;
+    /* Usa Flexbox para las tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se ajusten a múltiples líneas */
+    justify-content: center;
+    /* Centra las tarjetas */
+    gap: 20px;
+    /* Espaciado entre las tarjetas */
 }
 
 /* Estilos para cada tarjeta de servicio */
 .card__service {
-    background-color: #f9f9f9; /* Fondo suave para cada tarjeta */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
-    overflow: hidden; /* Oculta desbordamientos */
-    transition: transform 0.3s, box-shadow 0.3s; /* Suaviza el efecto de agrandamiento y sombra */
-    width: calc(33.33% - 20px); /* Ancho de la tarjeta (3 en una fila) */
-    position: relative; /* Permite el uso de pseudo-elementos */
+    background-color: #f9f9f9;
+    /* Fondo suave para cada tarjeta */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra más profunda */
+    overflow: hidden;
+    /* Oculta desbordamientos */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Suaviza el efecto de agrandamiento y sombra */
+    width: calc(33.33% - 20px);
+    /* Ancho de la tarjeta (3 en una fila) */
+    position: relative;
+    /* Permite el uso de pseudo-elementos */
 }
 
 /* Efecto de fondo para la tarjeta */
 .card__service::before {
-    content: ""; /* Crea un pseudo-elemento */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 0; /* Alineado al tope */
-    left: 0; /* Alineado a la izquierda */
-    right: 0; /* Alineado a la derecha */
-    bottom: 0; /* Alineado al fondo */
-    background: rgba(175, 173, 76, 0.1); /* Fondo rojo claro */
-    z-index: 0; /* Coloca detrás del contenido */
-    transition: 0.3s; /* Suaviza el cambio de fondo */
+    content: "";
+    /* Crea un pseudo-elemento */
+    position: absolute;
+    /* Posicionamiento absoluto */
+    top: 0;
+    /* Alineado al tope */
+    left: 0;
+    /* Alineado a la izquierda */
+    right: 0;
+    /* Alineado a la derecha */
+    bottom: 0;
+    /* Alineado al fondo */
+    background: rgba(175, 173, 76, 0.1);
+    /* Fondo rojo claro */
+    z-index: 0;
+    /* Coloca detrás del contenido */
+    transition: 0.3s;
+    /* Suaviza el cambio de fondo */
 }
 
 /* Estilo para la imagen de la tarjeta */
 .card__service img {
-    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-    height: 150px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Mantiene la proporción de aspecto */
-    z-index: 1; /* Coloca encima del fondo */
+    width: 100%;
+    /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 150px;
+    /* Altura fija para todas las imágenes */
+    object-fit: cover;
+    /* Mantiene la proporción de aspecto */
+    z-index: 1;
+    /* Coloca encima del fondo */
 }
 
 /* Estilo para el contenido dentro de cada tarjeta */
 .card__service h2 {
-    font-size: 1.5em; /* Tamaño de fuente para el título */
-    color: #000000; /* Color del texto */
-    margin: 10px 0; /* Espaciado superior e inferior */
-    z-index: 1; /* Coloca encima del fondo */
+    font-size: 1.5em;
+    /* Tamaño de fuente para el título */
+    color: #000000;
+    /* Color del texto */
+    margin: 10px 0;
+    /* Espaciado superior e inferior */
+    z-index: 1;
+    /* Coloca encima del fondo */
 }
 
 .card__service p {
-    font-size: 1em; /* Tamaño de fuente para el texto */
-    color: #555; /* Color del texto */
-    margin: 10px 0; /* Espaciado superior e inferior */
-    padding: 0 15px; /* Espaciado interno lateral */
-    z-index: 1; /* Coloca encima del fondo */
+    font-size: 1em;
+    /* Tamaño de fuente para el texto */
+    color: #555;
+    /* Color del texto */
+    margin: 10px 0;
+    /* Espaciado superior e inferior */
+    padding: 0 15px;
+    /* Espaciado interno lateral */
+    z-index: 1;
+    /* Coloca encima del fondo */
 }
 
 /* Estilo para el enlace en cada tarjeta */
 .card__service a {
-    display: inline-block; /* Permite el uso de márgenes */
-    padding: 10px 20px; /* Espaciado interno para el enlace */
-    background-color: #ff0505; /* Color verde para el enlace */
-    color: white; /* Color del texto en el enlace */
-    border-radius: 25px; /* Bordes redondeados */
-    text-decoration: none; /* Sin subrayado */
-    transition: background-color 0.3s, transform 0.3s; /* Suaviza los efectos de cambio */
-    z-index: 1; /* Coloca encima del fondo */
+    display: inline-block;
+    /* Permite el uso de márgenes */
+    padding: 10px 20px;
+    /* Espaciado interno para el enlace */
+    background-color: #ff0505;
+    /* Color verde para el enlace */
+    color: white;
+    /* Color del texto en el enlace */
+    border-radius: 25px;
+    /* Bordes redondeados */
+    text-decoration: none;
+    /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Suaviza los efectos de cambio */
+    z-index: 1;
+    /* Coloca encima del fondo */
 }
 
 /* Efecto hover para el enlace */
 .card__service a:hover {
-    background-color: #a04545; /* Cambia el color al pasar el ratón */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    background-color: #a04545;
+    /* Cambia el color al pasar el ratón */
+    transform: scale(1.1);
+    /* Aumenta ligeramente el tamaño al pasar el ratón */
 }
 
 /* Efecto hover para la tarjeta */
 .card__service:hover {
-    transform: translateY(-5px); /* Eleva la tarjeta ligeramente al pasar el ratón */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+    transform: translateY(-5px);
+    /* Eleva la tarjeta ligeramente al pasar el ratón */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Aumenta la sombra al pasar el ratón */
 }
 
 /* Efecto hover para el fondo de la tarjeta */
 .card__service:hover::before {
-    background: rgba(175, 76, 76, 0.2); /* Aumenta el color de fondo al pasar el ratón */
+    background: rgba(175, 76, 76, 0.2);
+    /* Aumenta el color de fondo al pasar el ratón */
 }
 
 /* Estilos responsivos para pantallas más pequeñas */
 @media (max-width: 900px) {
     .card__service {
-        width: calc(33.33% - 20px); /* Tres tarjetas en fila en pantallas medianas */
+        width: calc(33.33% - 20px);
+        /* Tres tarjetas en fila en pantallas medianas */
     }
 }
 
 @media (max-width: 600px) {
     .card__service {
-        width: calc(50% - 20px); /* Dos tarjetas en fila en pantallas pequeñas */
+        width: calc(50% - 20px);
+        /* Dos tarjetas en fila en pantallas pequeñas */
     }
 
     .text__service h1 {
-        font-size: 2em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+        font-size: 2em;
+        /* Tamaño de fuente más pequeño en pantallas pequeñas */
     }
 
     .card__service h2 {
-        font-size: 1.2em; /* Tamaño de fuente más pequeño para el título de la tarjeta */
+        font-size: 1.2em;
+        /* Tamaño de fuente más pequeño para el título de la tarjeta */
     }
 }
 
 @media (max-width: 400px) {
     .card__service {
-        width: calc(100% - 20px); /* Una tarjeta en fila en pantallas muy pequeñas */
+        width: calc(100% - 20px);
+        /* Una tarjeta en fila en pantallas muy pequeñas */
     }
 }
 
@@ -795,108 +992,159 @@ body {
 
 /* Sección Proyectos: Contenedor general */
 .container__proyect {
-    padding: 40px 0; /* Espaciado superior e inferior del contenedor */
-    background: var(--background-color); /* Color de fondo dinámico según la variable */
-    margin-top: 0px; /* Separación superior para alineación */
-    text-align: center; /* Alinea el texto dentro de esta sección al centro */
+    padding: 40px 0;
+    /* Espaciado superior e inferior del contenedor */
+    background: var(--background-color);
+    /* Color de fondo dinámico según la variable */
+    margin-top: 0px;
+    /* Separación superior para alineación */
+    text-align: center;
+    /* Alinea el texto dentro de esta sección al centro */
 }
 
 /* Estilo del subtítulo "NUESTROS PROYECTOS" con 1em */
 .text__service p {
-    font-size: 1.2em; /* Tamaño de fuente reducido a 1em */
-    color: #666; /* Color gris para no competir visualmente con el título */
-    margin-bottom: 10px; /* Espaciado inferior para separar del contenido */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas para resaltarlo */
+    font-size: 1.2em;
+    /* Tamaño de fuente reducido a 1em */
+    color: #666;
+    /* Color gris para no competir visualmente con el título */
+    margin-bottom: 10px;
+    /* Espaciado inferior para separar del contenido */
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas para resaltarlo */
 }
 
 /* Estilo del título principal */
 .text__service h1 {
-    font-size: 2.0rem; /* Tamaño grande para destacar el título */
-    color: #333; /* Color oscuro para contraste */
-    margin-bottom: 10px; /* Espaciado inferior entre el título y el párrafo */
+    font-size: 2.0rem;
+    /* Tamaño grande para destacar el título */
+    color: #333;
+    /* Color oscuro para contraste */
+    margin-bottom: 10px;
+    /* Espaciado inferior entre el título y el párrafo */
 }
 
 /* Contenedor de las tarjetas (tarjetas de proyectos) */
 .container__card-proyect {
-    display: flex; /* Usa flexbox para organizar las tarjetas en fila */
-    justify-content: space-around; /* Distribuye el espacio entre las tarjetas */
-    flex-wrap: wrap; /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
-    gap: 30px; /* Espacio entre las tarjetas */
+    display: flex;
+    /* Usa flexbox para organizar las tarjetas en fila */
+    justify-content: space-around;
+    /* Distribuye el espacio entre las tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
+    gap: 30px;
+    /* Espacio entre las tarjetas */
 }
 
 /* Estilos de las tarjetas individuales */
 .card__proyect {
-    position: relative; /* Permite colocar el overlay encima de la tarjeta */
-    width: 320px; /* Anchura fija de la tarjeta */
-    height: 320px; /* Altura fija de la tarjeta */
-    border-radius: 15px; /* Bordes redondeados para un aspecto moderno */
-    color: #fff; /* Color blanco para el texto por defecto */
-    text-align: center; /* Alineación centrada del texto dentro de la tarjeta */
-    background-size: cover; /* La imagen de fondo se ajusta para cubrir toda la tarjeta */
-    background-position: center; /* Centra la imagen de fondo */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de elevación */
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Suaviza la animación de hover */
-    overflow: hidden; /* Oculta el contenido que sobresalga de la tarjeta */
+    position: relative;
+    /* Permite colocar el overlay encima de la tarjeta */
+    width: 320px;
+    /* Anchura fija de la tarjeta */
+    height: 320px;
+    /* Altura fija de la tarjeta */
+    border-radius: 15px;
+    /* Bordes redondeados para un aspecto moderno */
+    color: #fff;
+    /* Color blanco para el texto por defecto */
+    text-align: center;
+    /* Alineación centrada del texto dentro de la tarjeta */
+    background-size: cover;
+    /* La imagen de fondo se ajusta para cubrir toda la tarjeta */
+    background-position: center;
+    /* Centra la imagen de fondo */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar un efecto de elevación */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* Suaviza la animación de hover */
+    overflow: hidden;
+    /* Oculta el contenido que sobresalga de la tarjeta */
 }
 
 /* Efecto hover para agrandar ligeramente la tarjeta y cambiar colores */
 .card__proyect:hover {
-    transform: scale(1.05); /* Aumenta el tamaño en un 5% al pasar el ratón */
+    transform: scale(1.05);
+    /* Aumenta el tamaño en un 5% al pasar el ratón */
 }
 
 /* Capa de superposición (overlay) encima de la tarjeta para oscurecer el fondo */
 .card__proyect .overlay {
-    position: absolute; /* Posiciona la capa en relación a la tarjeta */
-    top: 0; /* Alinea la capa al borde superior */
-    left: 0; /* Alinea la capa al borde izquierdo */
-    width: 100%; /* La capa cubre el ancho total de la tarjeta */
-    height: 100%; /* La capa cubre la altura total de la tarjeta */
-    background: rgba(0, 0, 0, 0.589); /* Fondo semitransparente negro */
-    border-radius: 15px; /* Bordes redondeados para coincidir con la tarjeta */
+    position: absolute;
+    /* Posiciona la capa en relación a la tarjeta */
+    top: 0;
+    /* Alinea la capa al borde superior */
+    left: 0;
+    /* Alinea la capa al borde izquierdo */
+    width: 100%;
+    /* La capa cubre el ancho total de la tarjeta */
+    height: 100%;
+    /* La capa cubre la altura total de la tarjeta */
+    background: rgba(0, 0, 0, 0.589);
+    /* Fondo semitransparente negro */
+    border-radius: 15px;
+    /* Bordes redondeados para coincidir con la tarjeta */
 }
 
 /* Contenido de texto dentro de la tarjeta */
 .card__content {
-    position: relative; /* Posiciona el contenido por encima del overlay */
-    z-index: 2; /* Asegura que el texto esté por encima del overlay */
-    padding: 20px; /* Espaciado interno para el contenido */
+    position: relative;
+    /* Posiciona el contenido por encima del overlay */
+    z-index: 2;
+    /* Asegura que el texto esté por encima del overlay */
+    padding: 20px;
+    /* Espaciado interno para el contenido */
 }
 
 /* Estilo del título dentro de la tarjeta */
 .card__content h2 {
-    margin: 0; /* Sin margen superior o inferior */
-    font-size: 1.8rem; /* Tamaño grande para destacar el título */
-    color: #fff; /* Color blanco por defecto */
-    transition: color 0.3s ease-in-out; /* Animación suave del cambio de color */
+    margin: 0;
+    /* Sin margen superior o inferior */
+    font-size: 1.8rem;
+    /* Tamaño grande para destacar el título */
+    color: #fff;
+    /* Color blanco por defecto */
+    transition: color 0.3s ease-in-out;
+    /* Animación suave del cambio de color */
 }
 
 /* Estilo del párrafo dentro de la tarjeta */
 .card__content p {
-    margin: 10px 0 0; /* Espaciado superior entre el título y el párrafo */
-    font-size: 1.1rem; /* Tamaño de texto mediano */
-    color: #f0f0f0; /* Color gris claro por defecto */
-    transition: color 0.3s ease-in-out; /* Animación suave del cambio de color */
+    margin: 10px 0 0;
+    /* Espaciado superior entre el título y el párrafo */
+    font-size: 1.1rem;
+    /* Tamaño de texto mediano */
+    color: #f0f0f0;
+    /* Color gris claro por defecto */
+    transition: color 0.3s ease-in-out;
+    /* Animación suave del cambio de color */
 }
 
 /* Cambio de colores al hacer hover en la tarjeta */
 .card__proyect:hover h2 {
-    color: #FFD700; /* Cambia el título a un amarillo fuerte (dorado) */
+    color: #FFD700;
+    /* Cambia el título a un amarillo fuerte (dorado) */
 }
 
 .card__proyect:hover p {
-    color: #ffffff; /* Cambia el párrafo a blanco */
+    color: #ffffff;
+    /* Cambia el párrafo a blanco */
 }
 
 /* Estilo responsivo: Ajustes para pantallas más pequeñas (como móviles) */
 @media screen and (max-width: 768px) {
     .container__card-proyect {
-        flex-direction: column; /* Cambia la disposición a columna (una debajo de la otra) */
-        align-items: center; /* Alinea las tarjetas al centro en pantallas pequeñas */
+        flex-direction: column;
+        /* Cambia la disposición a columna (una debajo de la otra) */
+        align-items: center;
+        /* Alinea las tarjetas al centro en pantallas pequeñas */
     }
 
     .card__proyect {
-        width: 90%; /* Hace las tarjetas más anchas para pantallas pequeñas */
-        height: 300px; /* Ajusta la altura para mejor proporción en pantallas pequeñas */
+        width: 90%;
+        /* Hace las tarjetas más anchas para pantallas pequeñas */
+        height: 300px;
+        /* Ajusta la altura para mejor proporción en pantallas pequeñas */
     }
 }
 
@@ -906,7 +1154,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Aumentamos el ancho máximo */
+    max-width: 1200px;
+    /* Aumentamos el ancho máximo */
     margin: 50px auto;
     padding: 30px;
     background: linear-gradient(135deg, #ce0c0c 30%, #1340e2 100%);
@@ -918,7 +1167,8 @@ body {
 
 /* Sección del formulario */
 .form-section {
-    width: 60%; /* Aumentamos el ancho del formulario */
+    width: 60%;
+    /* Aumentamos el ancho del formulario */
 }
 
 .form-section label {
@@ -932,11 +1182,13 @@ body {
 
 .form-section input[type="text"] {
     width: 100%;
-    padding: 15px 12px; /* Ajustamos el padding para que sea más amplio */
+    padding: 15px 12px;
+    /* Ajustamos el padding para que sea más amplio */
     border: none;
     border-radius: 10px;
     box-sizing: border-box;
-    font-size: 16px; /* Aumentamos el tamaño de fuente */
+    font-size: 16px;
+    /* Aumentamos el tamaño de fuente */
     background: #fff;
     color: #333;
     transition: all 0.3s ease;
@@ -953,7 +1205,8 @@ body {
 
 .form-section .button {
     display: inline-block;
-    padding: 15px 30px; /* Aumentamos el tamaño del botón */
+    padding: 15px 30px;
+    /* Aumentamos el tamaño del botón */
     margin-top: 20px;
     background-color: #fff;
     color: #af2b2b;
@@ -974,7 +1227,8 @@ body {
 
 /* Sección de la imagen */
 .image-section {
-    width: 35%; /* Ajustamos el ancho de la imagen */
+    width: 35%;
+    /* Ajustamos el ancho de la imagen */
     text-align: center;
 }
 
@@ -997,156 +1251,229 @@ body {
     margin: 20px auto;
     max-width: 900px;
 }
+
 /* Contenedor general que puede incluir otros elementos multimedia */
 .media-container {
-    width: 100%; /* El contenedor de medios ocupa el 100% del ancho de la página */
-    margin: 0 auto; /* Centrar el contenedor */
-    background-color: #f8f8f8; /* Color de fondo claro para hacer que el video destaque */
-    padding: 20px 0; /* Espacio alrededor del contenido */
+    width: 100%;
+    /* El contenedor de medios ocupa el 100% del ancho de la página */
+    margin: 0 auto;
+    /* Centrar el contenedor */
+    background-color: #f8f8f8;
+    /* Color de fondo claro para hacer que el video destaque */
+    padding: 20px 0;
+    /* Espacio alrededor del contenido */
 }
 
 /* Sección de video (centrar el contenido) */
 .video-section {
-    text-align: center; /* Centra todos los elementos dentro de la sección */
+    text-align: center;
+    /* Centra todos los elementos dentro de la sección */
     padding: 10px;
 }
 
 /* Título del reproductor */
 .video-section h2 {
     font-size: 28px;
-    color: #eeeeee; /* Color rojo fuerte, creativo para resaltar el título */
-    background: linear-gradient(90deg, #9f3a3a 0%, #906e4a 100%); /* Gradiente con colores rojos */
+    color: #eeeeee;
+    /* Color rojo fuerte, creativo para resaltar el título */
+    background: linear-gradient(90deg, #9f3a3a 0%, #906e4a 100%);
+    /* Gradiente con colores rojos */
     padding: 10px;
     margin-bottom: 20px;
-    display: inline-block; /* Solo ocupa el espacio necesario para el texto */
+    display: inline-block;
+    /* Solo ocupa el espacio necesario para el texto */
     font-family: 'Arial', sans-serif;
     letter-spacing: 2px;
-    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutiles para dar profundidad */
+    border-radius: 8px;
+    /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombras sutiles para dar profundidad */
 }
 
 /* Contenedor del video */
 .video-container {
     position: center;
-    width: 1000%; /* El contenedor del video ahora ocupa todo el ancho de su contenedor padre */
-    max-width: 110%; /* Asegurarse de que no se desborde en pantallas pequeñas */
-    background-color: #000000; /* Fondo negro detrás del video */
-    border-radius: 15px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    width: 1000%;
+    /* El contenedor del video ahora ocupa todo el ancho de su contenedor padre */
+    max-width: 110%;
+    /* Asegurarse de que no se desborde en pantallas pequeñas */
+    background-color: #000000;
+    /* Fondo negro detrás del video */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Oculta cualquier contenido que se desborde del contenedor */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Sombra más pronunciada */
 }
 
 /* Video */
 video {
-    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción del video */
-    border: none; /* Elimina cualquier borde predeterminado */
-    border-radius: 5px; /* Los bordes del video coinciden con el del contenedor */
+    width: 100%;
+    /* El video ocupa el 100% del ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción del video */
+    border: none;
+    /* Elimina cualquier borde predeterminado */
+    border-radius: 5px;
+    /* Los bordes del video coinciden con el del contenedor */
 }
 
 
 
 /* Estilos generales para el pie de página */
 footer {
-    background: linear-gradient(135deg, #ff0707, #9fa99f); /* Fondo degradado */
-    color: white; /* Color del texto */
-    padding: 100% 0; /* Espaciado interno */
-    position: relative; /* Posicionamiento relativo */
-    overflow: hidden; /* Oculta contenido desbordante */
+    background: linear-gradient(135deg, #ff0707, #9fa99f);
+    /* Fondo degradado */
+    color: white;
+    /* Color del texto */
+    padding: 100% 0;
+    /* Espaciado interno */
+    position: relative;
+    /* Posicionamiento relativo */
+    overflow: hidden;
+    /* Oculta contenido desbordante */
 }
 
 /* Contenedor del pie de página */
 .footer-container {
-    display: flex; /* Distribución en fila */
-    justify-content: space-evenly; /* Espaciado uniforme entre bloques */
-    align-items: flex-start; /* Alinea elementos al inicio verticalmente */
-    flex-wrap: wrap; /* Permite el ajuste de bloques en pantallas pequeñas */
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrado automático del contenedor */
-    text-align: center; /* Alineación centrada del texto */
+    display: flex;
+    /* Distribución en fila */
+    justify-content: space-evenly;
+    /* Espaciado uniforme entre bloques */
+    align-items: flex-start;
+    /* Alinea elementos al inicio verticalmente */
+    flex-wrap: wrap;
+    /* Permite el ajuste de bloques en pantallas pequeñas */
+    max-width: 1200px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centrado automático del contenedor */
+    text-align: center;
+    /* Alineación centrada del texto */
 }
 
 /* Estilos individuales para cada bloque de contenido */
 .footer-content {
-    flex: 1; /* Distribuye el espacio equitativamente */
-    padding: 10px 20px; /* Espaciado interno */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves en hover */
+    flex: 1;
+    /* Distribuye el espacio equitativamente */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Transiciones suaves en hover */
 }
 
 /* Estilos para los encabezados de cada bloque */
 .footer-content h4 {
-    font-size: 18px; /* Tamaño de fuente */
-    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 18px;
+    /* Tamaño de fuente */
+    margin-bottom: 10px;
+    /* Espaciado inferior */
 }
 
 /* Estilos para los párrafos de cada bloque */
 .footer-content p {
-    font-size: 16px; /* Tamaño de fuente */
-    color: #f2f2f2; /* Color gris claro */
-    border-bottom: 2px solid #f2f2f2; /* Línea inferior decorativa */
-    padding-bottom: 10px; /* Espaciado inferior antes de la línea */
+    font-size: 16px;
+    /* Tamaño de fuente */
+    color: #f2f2f2;
+    /* Color gris claro */
+    border-bottom: 2px solid #f2f2f2;
+    /* Línea inferior decorativa */
+    padding-bottom: 10px;
+    /* Espaciado inferior antes de la línea */
 }
 
 /* Efecto de hover para los bloques de contenido */
 .footer-content:hover {
-    transform: translateY(-5px); /* Desplazamiento hacia arriba */
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); /* Sombra de elevación */
+    transform: translateY(-5px);
+    /* Desplazamiento hacia arriba */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra de elevación */
 }
 
 /* Estilos para el título final del pie de página */
 .footer-title {
-    text-align: center; /* Texto centrado */
-    font-size: 20px; /* Tamaño de fuente */
-    font-weight: 300; /* Peso ligero de la fuente */
-    color: #fff; /* Color blanco */
-    margin-top: 30px; /* Espaciado superior */
+    text-align: center;
+    /* Texto centrado */
+    font-size: 20px;
+    /* Tamaño de fuente */
+    font-weight: 300;
+    /* Peso ligero de la fuente */
+    color: #fff;
+    /* Color blanco */
+    margin-top: 30px;
+    /* Espaciado superior */
 }
 
 /* Línea decorativa debajo del título */
 .footer-title:after {
-    content: ''; /* Elemento pseudo vacío */
-    display: block; /* Comportamiento de bloque */
-    width: 100px; /* Ancho de la línea */
-    height: 2px; /* Altura de la línea */
-    background: white; /* Color de la línea */
-    margin: 10px auto; /* Centrado de la línea */
+    content: '';
+    /* Elemento pseudo vacío */
+    display: block;
+    /* Comportamiento de bloque */
+    width: 100px;
+    /* Ancho de la línea */
+    height: 2px;
+    /* Altura de la línea */
+    background: white;
+    /* Color de la línea */
+    margin: 10px auto;
+    /* Centrado de la línea */
 }
 
 /* Estilos para los iconos dentro de los bloques */
 footer i {
-    font-size: 18px; /* Tamaño del icono */
-    color: #ffcc00; /* Color amarillo para destacar */
-    margin-right: 8px; /* Espaciado a la derecha del icono */
+    font-size: 18px;
+    /* Tamaño del icono */
+    color: #ffcc00;
+    /* Color amarillo para destacar */
+    margin-right: 8px;
+    /* Espaciado a la derecha del icono */
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Cambia a disposición en columna */
-        align-items: center; /* Centra los bloques verticalmente */
+        flex-direction: column;
+        /* Cambia a disposición en columna */
+        align-items: center;
+        /* Centra los bloques verticalmente */
     }
 
     .footer-content {
-        margin-bottom: 20px; /* Espaciado inferior entre bloques */
+        margin-bottom: 20px;
+        /* Espaciado inferior entre bloques */
     }
 }
 
 /* Estilos para el encabezado del footer "Desarrollado por..." */
 footer h2.elementor-heading-title {
-    font-size: 16px; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    text-align: center; /* Centrar el texto */
-    color: #ffffff; /* Color del texto */
-    background-color: #3d3838; /* Fondo oscuro */
-    padding: 10px 0; /* Espaciado vertical */
-    margin: 0; /* Sin margen */
-    border-top: 0 solid #1d1c20; /* Línea superior decorativa */
-    border-bottom: 2px solid #181613; /* Línea inferior decorativa */
-    font-family: 'Arial', sans-serif; /* Fuente */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    font-weight: bold;
+    /* Negrita */
+    text-align: center;
+    /* Centrar el texto */
+    color: #ffffff;
+    /* Color del texto */
+    background-color: #3d3838;
+    /* Fondo oscuro */
+    padding: 10px 0;
+    /* Espaciado vertical */
+    margin: 0;
+    /* Sin margen */
+    border-top: 0 solid #1d1c20;
+    /* Línea superior decorativa */
+    border-bottom: 2px solid #181613;
+    /* Línea inferior decorativa */
+    font-family: 'Arial', sans-serif;
+    /* Fuente */
 }
 
 /* Eliminar posible duplicado de estilo en el footer */
 footer {
-    padding: 0; /* Espaciado interior del footer */
-    background-color: #cb5c5c; /* Color de fondo */
+    padding: 0;
+    /* Espaciado interior del footer */
+    background-color: #cb5c5c;
+    /* Color de fondo */
 }
