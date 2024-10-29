@@ -1152,445 +1152,388 @@ body {
 /* Contenedor principal */
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    /* Aumentamos el ancho máximo */
-    margin: 50px auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #ce0c0c 30%, #1340e2 100%);
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    max-width: 1200px; /* Aumentamos el ancho máximo del contenedor */
+    margin: 50px auto; /* Centra el contenedor horizontalmente y da margen superior/inferior */
+    padding: 30px; /* Espacio interno alrededor de los elementos */
+    background: linear-gradient(135deg, #ce0c0c 30%, #1340e2 100%); /* Gradiente de color en fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+    color: #fff; /* Color de texto en blanco */
+    font-family: 'Arial', sans-serif; /* Fuente utilizada para el texto */
 }
 
 /* Sección del formulario */
 .form-section {
-    width: 60%;
-    /* Aumentamos el ancho del formulario */
+    width: 60%; /* Aumentamos el ancho del formulario al 60% del contenedor */
 }
 
 .form-section label {
-    display: flex;
-    margin: 15px 0 5px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: flex; /* Flex para alinear el contenido en el label */
+    margin: 15px 0 5px; /* Margen superior e inferior del label */
+    font-size: 14px; /* Tamaño de letra */
+    font-weight: 600; /* Negrita */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
 .form-section input[type="text"] {
-    width: 100%;
-    padding: 15px 12px;
-    /* Ajustamos el padding para que sea más amplio */
-    border: none;
-    border-radius: 10px;
-    box-sizing: border-box;
-    font-size: 16px;
-    /* Aumentamos el tamaño de fuente */
-    background: #fff;
-    color: #333;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* El input toma todo el ancho disponible */
+    padding: 15px 12px; /* Espaciado interno en el input */
+    border: none; /* Sin borde en el input */
+    border-radius: 10px; /* Bordes redondeados en el input */
+    box-sizing: border-box; /* Asegura que el padding y el ancho se comporten correctamente */
+    font-size: 16px; /* Aumentamos el tamaño de fuente */
+    background: #fff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    transition: all 0.3s ease; /* Transición suave para cambios de estilo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .form-section input[type="text"]:focus {
-    background-color: #f0f0f0;
-    border: none;
-    outline: none;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    transform: translateY(-2px);
+    background-color: #f0f0f0; /* Cambia el color de fondo al hacer focus */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno predeterminado del navegador */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Sombra suave cuando está en foco */
+    transform: translateY(-2px); /* Levanta el input ligeramente al hacer focus */
 }
 
 .form-section .button {
-    display: inline-block;
-    padding: 15px 30px;
-    /* Aumentamos el tamaño del botón */
-    margin-top: 20px;
-    background-color: #fff;
-    color: #af2b2b;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Botón en línea pero con comportamiento de bloque */
+    padding: 15px 30px; /* Aumentamos el tamaño del botón */
+    margin-top: 20px; /* Margen superior */
+    background-color: #fff; /* Fondo blanco del botón */
+    color: #af2b2b; /* Color del texto del botón */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Bordes redondeados en el botón */
+    text-align: center; /* Centra el texto en el botón */
+    transition: all 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera del botón */
 }
 
 .form-section .button:hover {
-    background-color: #e6e6e6;
-    color: #1340e2;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    transform: translateY(-3px);
+    background-color: #e6e6e6; /* Fondo gris claro cuando se hace hover */
+    color: #1340e2; /* Color de texto azul en hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más profunda al hacer hover */
+    transform: translateY(-3px); /* Levanta el botón ligeramente en hover */
 }
 
 /* Sección de la imagen */
 .image-section {
-    width: 35%;
-    /* Ajustamos el ancho de la imagen */
-    text-align: center;
+    width: 35%; /* Ajustamos el ancho de la imagen al 35% del contenedor */
+    text-align: center; /* Centra el contenido de la imagen */
 }
 
 .image-section img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 100%; /* La imagen toma el 100% del ancho disponible */
+    border-radius: 10px; /* Bordes redondeados en la imagen */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra para la imagen */
 }
+
+/* Contenedor principal de medios */
+.media-container {
+    display: flex; /* Flexbox para alinear los medios */
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 30px; /* Espaciado interno del contenedor */
+    background: linear-gradient(135deg, #a1a1a1, #a4ab8d); /* Gradiente de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más profunda */
+    margin: 20px auto; /* Margen superior e inferior, con centrado automático */
+    max-width: 900px; /* Ancho máximo del contenedor */
+}
+
 
 
 /* Contenedor principal de medios */
 .media-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    background: linear-gradient(135deg, #a1a1a1, #a4ab8d);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-    max-width: 900px;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 30px; /* Espaciado interno */
+    background: linear-gradient(135deg, #a1a1a1, #a4ab8d); /* Gradiente de fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    margin: 20px auto; /* Centrado del contenedor */
+    max-width: 900px; /* Ancho máximo del contenedor */
 }
 
 /* Contenedor general que puede incluir otros elementos multimedia */
 .media-container {
-    width: 100%;
-    /* El contenedor de medios ocupa el 100% del ancho de la página */
-    margin: 0 auto;
-    /* Centrar el contenedor */
-    background-color: #f8f8f8;
-    /* Color de fondo claro para hacer que el video destaque */
-    padding: 20px 0;
-    /* Espacio alrededor del contenido */
+    width: 100%; /* El contenedor ocupa el 100% del ancho de la página */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #f8f8f8; /* Color de fondo claro para destacar contenido */
+    padding: 20px 0; /* Espacio superior/inferior alrededor del contenido */
 }
 
 /* Sección de video (centrar el contenido) */
 .video-section {
-    text-align: center;
-    /* Centra todos los elementos dentro de la sección */
-    padding: 10px;
+    text-align: center; /* Centra todos los elementos dentro de la sección */
+    padding: 10px; /* Espaciado interno */
 }
 
 /* Título del reproductor */
 .video-section h2 {
-    font-size: 28px;
-    color: #eeeeee;
-    /* Color rojo fuerte, creativo para resaltar el título */
-    background: linear-gradient(90deg, #9f3a3a 0%, #906e4a 100%);
-    /* Gradiente con colores rojos */
-    padding: 10px;
-    margin-bottom: 20px;
-    display: inline-block;
-    /* Solo ocupa el espacio necesario para el texto */
-    font-family: 'Arial', sans-serif;
-    letter-spacing: 2px;
-    border-radius: 8px;
-    /* Bordes redondeados para un estilo más suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombras sutiles para dar profundidad */
+    font-size: 28px; /* Tamaño de fuente grande */
+    color: #eeeeee; /* Color del texto (gris claro) */
+    background: linear-gradient(90deg, #9f3a3a 0%, #906e4a 100%); /* Gradiente de fondo para el título */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    display: inline-block; /* Solo ocupa el ancho del texto */
+    font-family: 'Arial', sans-serif; /* Fuente usada */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras ligeras para darle profundidad */
 }
 
 /* Contenedor del video */
 .video-container {
-    position: center;
-    width: 1000%;
-    /* El contenedor del video ahora ocupa todo el ancho de su contenedor padre */
-    max-width: 110%;
-    /* Asegurarse de que no se desborde en pantallas pequeñas */
-    background-color: #000000;
-    /* Fondo negro detrás del video */
-    border-radius: 15px;
-    /* Bordes redondeados */
-    overflow: hidden;
-    /* Oculta cualquier contenido que se desborde del contenedor */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    /* Sombra más pronunciada */
+    position: center; /* Centra el video */
+    width: 1000%; /* Error: el ancho está mal configurado (debería ser 100%) */
+    max-width: 110%; /* Controla el desbordamiento del video */
+    background-color: #000000; /* Fondo negro detrás del video */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el contenido desbordante */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Sombra más profunda */
 }
 
 /* Video */
 video {
-    width: 100%;
-    /* El video ocupa el 100% del ancho del contenedor */
-    height: auto;
-    /* Mantiene la proporción del video */
-    border: none;
-    /* Elimina cualquier borde predeterminado */
-    border-radius: 5px;
-    /* Los bordes del video coinciden con el del contenedor */
+    width: 100%; /* El video ocupa todo el ancho disponible */
+    height: auto; /* Mantiene la proporción del video */
+    border: none; /* Elimina cualquier borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
+/* Sección de equipo */
 .team-section {
-    padding: 60px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #ffffff, #c85151);
-    color: white;
-
+    padding: 60px 20px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    background: linear-gradient(135deg, #ffffff, #c85151); /* Gradiente de fondo */
+    color: white; /* Texto en blanco */
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #000;
+    font-size: 3em; /* Tamaño de letra grande */
+    margin-bottom: 30px; /* Margen inferior */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+    color: #000; /* Color negro del texto */
 }
 
+/* Contenedor del equipo */
 .team-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+    display: flex; /* Diseño en fila */
+    justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas si es necesario */
+    gap: 30px; /* Espaciado entre elementos */
 }
 
+/* Tarjetas de miembros del equipo */
 .team-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 280px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
+    background: #fff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el contenido desbordante */
+    width: 280px; /* Ancho fijo */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición suave para animaciones */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    position: relative; /* Posicionamiento relativo para poder usar elementos pseudo */
 }
 
 .team-card::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 9, 9, 0.2);
-    border-radius: 50%;
-    z-index: -1;
-    transition: all 0.4s ease;
+    content: ''; /* Elemento pseudo que se utilizará como decoración */
+    position: absolute; /* Posiciona el círculo decorativo */
+    top: -50px; /* Posiciona el círculo por encima de la tarjeta */
+    left: -50px; /* Posiciona el círculo a la izquierda de la tarjeta */
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Alto del círculo */
+    background-color: rgba(255, 9, 9, 0.2); /* Círculo semitransparente */
+    border-radius: 50%; /* Hace que sea un círculo */
+    z-index: -1; /* Envía el círculo detrás del contenido de la tarjeta */
+    transition: all 0.4s ease; /* Transición suave */
 }
 
 .team-card:hover::before {
-    top: -80px;
-    left: -80px;
-    width: 150px;
-    height: 150px;
+    top: -80px; /* Mueve el círculo hacia arriba en hover */
+    left: -80px; /* Mueve el círculo hacia la izquierda en hover */
+    width: 150px; /* Aumenta el tamaño del círculo en hover */
+    height: 150px; /* Aumenta el tamaño del círculo en hover */
 }
 
+/* Animación al hacer hover sobre la tarjeta */
 .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px); /* Levanta la tarjeta */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
 }
 
+/* Estilos de la imagen del miembro del equipo */
 .team-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #007BFF;
-    object-fit: cover;
-    transition: border 0.4s ease;
+    width: 120px; /* Ancho de la imagen */
+    height: 120px; /* Alto de la imagen */
+    border-radius: 50%; /* Imagen redonda */
+    border: 4px solid #007BFF; /* Borde azul */
+    object-fit: cover; /* Asegura que la imagen cubra el área correctamente */
+    transition: border 0.4s ease; /* Transición suave del borde */
 }
 
+/* Al hacer hover, cambia el color del borde de la imagen */
 .team-card:hover img {
-    border-color: #ffffff;
+    border-color: #ffffff; /* Cambia el color del borde a blanco */
 }
 
 h2 {
-    font-size: 1.8em;
-    margin: 15px 0;
-    color: #080a0c;
-    transition: color 0.4s ease;
+    font-size: 1.8em; /* Tamaño de la fuente */
+    margin: 15px 0; /* Margen superior e inferior */
+    color: #080a0c; /* Color del texto */
+    transition: color 0.4s ease; /* Transición suave para el color */
 }
 
 p {
-    font-size: 1em;
-    color: #555;
+    font-size: 1em; /* Tamaño del texto */
+    color: #555; /* Color gris del texto */
 }
 
+/* Al hacer hover, cambia el color del nombre */
 .team-card:hover h2 {
-    color: #c64028;
+    color: #c64028; /* Cambia el color del texto a rojo oscuro */
 }
 
 .team-card p {
-    line-height: 1.6;
+    line-height: 1.6; /* Espaciado entre líneas */
 }
 
+/* Comentarios que se muestran al hacer hover */
 .comment {
-    display: none;
-    margin-top: 15px;
-    font-style: italic;
-    color: #ff0000;
-    transition: opacity 0.4s ease;
+    display: none; /* Oculta el comentario por defecto */
+    margin-top: 15px; /* Margen superior */
+    font-style: italic; /* Texto en cursiva */
+    color: #ff0000; /* Color rojo */
+    transition: opacity 0.4s ease; /* Transición suave de opacidad */
 }
 
 .team-card:hover .comment {
-    display: block;
-    opacity: 1;
+    display: block; /* Muestra el comentario al hacer hover */
+    opacity: 1; /* Hace que sea visible */
 }
 
+/* Ajustes para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .team-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Coloca las tarjetas en columna */
+        align-items: center; /* Centra las tarjetas */
     }
 
     .team-card {
-        width: 100%;
-        max-width: 400px;
+        width: 100%; /* Ancho del 100% en pantallas pequeñas */
+        max-width: 400px; /* Ancho máximo de la tarjeta */
     }
 }
 
-
 /* Estilos generales para el pie de página */
 footer {
-    background: linear-gradient(135deg, #ff0707, #9fa99f);
-    /* Fondo degradado */
-    color: white;
-    /* Color del texto */
-    padding: 100% 0;
-    /* Espaciado interno */
-    position: relative;
-    /* Posicionamiento relativo */
-    overflow: hidden;
-    /* Oculta contenido desbordante */
+    background: linear-gradient(135deg, #ff0707, #9fa99f); /* Fondo degradado */
+    color: white; /* Texto en blanco */
+    padding: 100% 0; /* Espaciado interno muy amplio (probablemente un error) */
+    position: relative; /* Posicionamiento relativo */
+    overflow: hidden; /* Oculta el contenido desbordante */
 }
 
 /* Contenedor del pie de página */
 .footer-container {
-    display: flex;
-    /* Distribución en fila */
-    justify-content: space-evenly;
-    /* Espaciado uniforme entre bloques */
-    align-items: flex-start;
-    /* Alinea elementos al inicio verticalmente */
-    flex-wrap: wrap;
-    /* Permite el ajuste de bloques en pantallas pequeñas */
-    max-width: 1200px;
-    /* Ancho máximo del contenedor */
-    margin: 0 auto;
-    /* Centrado automático del contenedor */
-    text-align: center;
-    /* Alineación centrada del texto */
+    display: flex; /* Diseño en fila */
+    justify-content: space-evenly; /* Espaciado uniforme entre bloques */
+    align-items: flex-start; /* Alinea los elementos verticalmente al inicio */
+    flex-wrap: wrap; /* Ajusta los bloques en pantallas pequeñas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado automático */
+    text-align: center; /* Texto centrado */
 }
 
-/* Estilos individuales para cada bloque de contenido */
+/* Bloques individuales del pie de página */
 .footer-content {
-    flex: 1;
-    /* Distribuye el espacio equitativamente */
-    padding: 10px 20px;
-    /* Espaciado interno */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    /* Transiciones suaves en hover */
+    flex: 1; /* Cada bloque ocupa el mismo espacio */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación suave */
 }
 
-/* Estilos para los encabezados de cada bloque */
+/* Encabezados de cada bloque */
 .footer-content h4 {
-    font-size: 18px;
-    /* Tamaño de fuente */
-    margin-bottom: 10px;
-    /* Espaciado inferior */
+    font-size: 18px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
 }
 
-/* Estilos para los párrafos de cada bloque */
+/* Párrafos dentro de cada bloque */
 .footer-content p {
-    font-size: 16px;
-    /* Tamaño de fuente */
-    color: #f2f2f2;
-    /* Color gris claro */
-    border-bottom: 2px solid #f2f2f2;
-    /* Línea inferior decorativa */
-    padding-bottom: 10px;
-    /* Espaciado inferior antes de la línea */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #f2f2f2; /* Texto en gris claro */
+    border-bottom: 2px solid #f2f2f2; /* Línea decorativa */
+    padding-bottom: 10px; /* Espaciado inferior */
 }
 
-/* Efecto de hover para los bloques de contenido */
+/* Efecto hover en los bloques de contenido */
 .footer-content:hover {
-    transform: translateY(-5px);
-    /* Desplazamiento hacia arriba */
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-    /* Sombra de elevación */
+    transform: translateY(-5px); /* Levanta el bloque */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
 }
 
-/* Estilos para el título final del pie de página */
+/* Título final del pie de página */
 .footer-title {
-    text-align: center;
-    /* Texto centrado */
-    font-size: 20px;
-    /* Tamaño de fuente */
-    font-weight: 300;
-    /* Peso ligero de la fuente */
-    color: #fff;
-    /* Color blanco */
-    margin-top: 30px;
-    /* Espaciado superior */
+    text-align: center; /* Texto centrado */
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: 300; /* Peso ligero */
+    color: #fff; /* Texto en blanco */
+    margin-top: 30px; /* Margen superior */
 }
 
 /* Línea decorativa debajo del título */
 .footer-title:after {
-    content: '';
-    /* Elemento pseudo vacío */
-    display: block;
-    /* Comportamiento de bloque */
-    width: 100px;
-    /* Ancho de la línea */
-    height: 2px;
-    /* Altura de la línea */
-    background: white;
-    /* Color de la línea */
-    margin: 10px auto;
-    /* Centrado de la línea */
+    content: ''; /* Elemento pseudo */
+    display: block; /* Se comporta como bloque */
+    width: 100px; /* Ancho de la línea */
+    height: 2px; /* Altura de la línea */
+    background: white; /* Color de la línea */
+    margin: 10px auto; /* Centrado */
 }
 
-/* Estilos para los iconos dentro de los bloques */
+/* Iconos en el pie de página */
 footer i {
-    font-size: 18px;
-    /* Tamaño del icono */
-    color: #ffcc00;
-    /* Color amarillo para destacar */
-    margin-right: 8px;
-    /* Espaciado a la derecha del icono */
+    font-size: 18px; /* Tamaño del icono */
+    color: #ffcc00; /* Color amarillo */
+    margin-right: 8px; /* Espaciado derecho */
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
-        /* Cambia a disposición en columna */
-        align-items: center;
-        /* Centra los bloques verticalmente */
+        flex-direction: column; /* Disposición en columna */
+        align-items: center; /* Centra los bloques */
     }
 
     .footer-content {
-        margin-bottom: 20px;
-        /* Espaciado inferior entre bloques */
+        margin-bottom: 20px; /* Espaciado inferior entre bloques */
     }
 }
 
-/* Estilos para el encabezado del footer "Desarrollado por..." */
+/* Encabezado del pie de página "Desarrollado por..." */
 footer h2.elementor-heading-title {
-    font-size: 16px;
-    /* Tamaño de la fuente */
-    font-weight: bold;
-    /* Negrita */
-    text-align: center;
-    /* Centrar el texto */
-    color: #ffffff;
-    /* Color del texto */
-    background-color: #3d3838;
-    /* Fondo oscuro */
-    padding: 10px 0;
-    /* Espaciado vertical */
-    margin: 0;
-    /* Sin margen */
-    border-top: 0 solid #1d1c20;
-    /* Línea superior decorativa */
-    border-bottom: 2px solid #181613;
-    /* Línea inferior decorativa */
-    font-family: 'Arial', sans-serif;
-    /* Fuente */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Texto centrado */
+    color: #ffffff; /* Color del texto */
+    background-color: #3d3838; /* Fondo oscuro */
+    padding: 10px 0; /* Espaciado vertical */
+    margin: 0; /* Sin margen */
+    border-top: 0 solid #1d1c20; /* Línea decorativa superior */
+    border-bottom: 2px solid #181613; /* Línea decorativa inferior */
+    font-family: 'Arial', sans-serif; /* Fuente */
 }
 
-/* Eliminar posible duplicado de estilo en el footer */
+/* Corregir duplicado de estilos en el footer */
 footer {
-    padding: 0;
-    /* Espaciado interior del footer */
-    background-color: #cb5c5c;
-    /* Color de fondo */
+    padding: 0; /* Elimina el espaciado excesivo */
+    background-color: #cb5c5c; /* Fondo del footer */
 }
