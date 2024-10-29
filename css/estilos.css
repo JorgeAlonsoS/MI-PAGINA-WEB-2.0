@@ -1321,6 +1321,8 @@ h1 {
     letter-spacing: 2px; /* Espaciado entre letras */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra de texto */
     color: #000; /* Color negro del texto */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 /* Contenedor del equipo */
@@ -1390,6 +1392,7 @@ h2 {
     margin: 15px 0; /* Margen superior e inferior */
     color: #080a0c; /* Color del texto */
     transition: color 0.4s ease; /* Transición suave para el color */
+    ;
 }
 
 p {
